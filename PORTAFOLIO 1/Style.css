@@ -1,0 +1,204 @@
+:root{
+    --blanco:  #ffffff;
+    --oscuro: #212121;
+    --primario: #076aff;
+    --secundario : #073596;
+    --gris: #9c9c9c;
+    --grisclaro: #dfe9f3;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+h1,h2{
+    font-weight: bold;
+}
+
+body{
+    margin: 0px;
+    font-family: "Nunito", sans-serif;
+}
+
+.navegacion{
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.navegacion a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.maps{
+    text-align: center;
+}
+
+.banner{
+    background-image: url(IMG/istockphoto-1439425791-1024x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.text-banner{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.text-banner{
+    display: grid;
+    place-self: center;
+}
+
+.text-banner-1{
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.banner a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.fondoBanner{
+    background-color: rgba(0, 0, 0, 0.397);
+    height: 500px;
+}
+
+.fondoBanner{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: center;
+}
+
+.Servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+
+.Servicio h3{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primario);
+    font-weight: 200;
+}
+
+.Servicio p{
+    text-align: center;
+    line-height: 2;
+}
+
+.icono{
+    background-color: var(--primario);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px)
+
+{
+
+.Servicios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.formulario{
+    background-color: var(--gris);
+    padding: 1.5rem  .5rem;
+    border-radius: 1rem;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 130%;
+    color: var(--primario);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.campo-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.campo1 input{
+    padding: .5rem 1.5rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+}
+
+.campo2 input{
+    padding: .5rem 1.5rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+}
+
+label{
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.boton-enviar{
+    display: flex;
+    justify-content: end;
+}
+
+.campo3 input{
+    padding: .5rem 1.5rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+}
+
+.campo4 textarea{
+    padding: 5rem 10rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
