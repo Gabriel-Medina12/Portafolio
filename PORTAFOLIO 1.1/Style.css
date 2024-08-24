@@ -238,14 +238,14 @@ button{
 
 main{
     background-color: var(--blanco);
-    margin-left: 100px;
-    margin-right: 100px;
-    border-radius: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px -2px 22px -2px rgba(0,0,0,0.75);
+    margin-left: none;
+    margin-right: none;
+    border-radius: none;
+    padding-top: none;
+    padding-bottom: none;
+    margin-top: none;
+    margin-bottom: none;
+    box-shadow: none;
 }
 
 body header{
@@ -263,4 +263,16 @@ body header{
     .campo-contenedor{
         grid-template-columns: repeat(2,1fr);
     }
+    main{
+        background-color: none;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-radius: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0px -2px 22px -2px rgba(0,0,0,0.75);
+        
     }
+}
