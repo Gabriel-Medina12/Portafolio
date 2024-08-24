@@ -18,6 +18,7 @@ h1,h2{
 body{
     margin: 0px;
     font-family: "Nunito", sans-serif;
+    background-color: var(--grisclaro);
 }
 
 .navegacion{
@@ -25,12 +26,17 @@ body{
     display: flex;
     flex-direction:row;
     justify-content: space-around;
-    padding: 10px;
+    
 }
 
 .navegacion a{
     color: var(--blanco);
     text-decoration: none;
+    padding: 10px;
+}
+
+.navegacion :hover{
+    background-color: var(--primario);
 }
 
 .maps{
@@ -58,7 +64,7 @@ body{
 .text-banner-1{
     color: var(--blanco);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .banner a{
@@ -84,9 +90,17 @@ body{
     height: 100%;
 }
 
+.fondoBanner p{
+    font-weight: 200;
+}
+
 .ubicacion{
     display: flex;
     justify-content: center;
+}
+
+.ubicacion a:hover{
+    background-color: var(--primario);
 }
 
 .Servicio{
@@ -123,28 +137,21 @@ body{
     flex-direction: column;
     align-items: center;
 }
-@media (min-width:768px)
 
-{
-
-.Servicios{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-}
 
 .form-container{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .formulario{
     background-color: var(--gris);
-    padding: 1.5rem  .5rem;
+    padding: .5rem  1rem;
     border-radius: 1rem;
     display: grid;
     justify-content: center;
-    width: 100%;
+    width: min(32rem,100%);
 }
 
 .formulario fieldset{
@@ -153,52 +160,111 @@ body{
 
 .formulario legend{
     text-align: center;
-    font-size: 130%;
+    font-size: 100%;
     color: var(--primario);
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
 }
 
 .campo-contenedor{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns:repeat(1,1fr);
+    margin-bottom: 5px;
 }
 
 .campo1 input{
-    padding: .5rem 1.5rem;
-    margin: .5rem 0;
+    padding: .5rem 2rem;
     border-radius: .5rem;
+    border: none;
+    width: 11rem;
 }
 
 .campo2 input{
-    padding: .5rem 1.5rem;
-    margin: .5rem 0;
+    padding: .5rem 2rem;
     border-radius: .5rem;
+    border: none;
+    width: 11.5rem;
+    
 }
 
-label{
+.formulario label{
     color: var(--blanco);
     font-weight: bold;
 }
 
 .boton-enviar{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
+    
+    padding-top: 5px;
+}
+
+.boton-enviar :hover{
+    background-color: var(--primario);
 }
 
 .campo3 input{
-    padding: .5rem 1.5rem;
-    margin: .5rem 0;
+    padding: .5rem 10.3rem;
     border-radius: .5rem;
+    border: none;
+    margin-bottom: .5rem;
 }
 
 .campo4 textarea{
-    padding: 5rem 10rem;
-    margin: .5rem 0;
+    padding: 5rem 10.5rem;
     border-radius: .5rem;
+    border: none;
+    
 }
 
 footer{
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+button{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco);
+    background-color: var(--secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+main{
+    background-color: var(--blanco);
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px -2px 22px -2px rgba(0,0,0,0.75);
+}
+
+body header{
+    background-color: var(--blanco);
+    padding: .3rem;
+}
+
+
+
+@media (min-width:768px){
+
+    .Servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+    .campo-contenedor{
+        grid-template-columns: repeat(2,1fr);
+    }
 }

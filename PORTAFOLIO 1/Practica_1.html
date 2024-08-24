@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <h1>Portafolio Web Gabriel Medina - Edtecnica</h1>
+    <header>
+        <h1>Portafolio Web Gabriel Medina - Edtecnica</h1>
+    </header>
     
     <nav class="navegacion">
         <a href="#">Inicio</a>
@@ -17,7 +19,7 @@
         <a href="#">Clientes</a>
         <a href="#">Contacto</a>
     </nav>
-
+<!--Comentando con HTML-->
     <div class="banner">
         <section class="fondoBanner">
             <h2 class="text-banner-1">Diseño y Desarrollo Web</h2>
@@ -35,7 +37,8 @@
     </section>
     </div>
 
-    <section>
+    <main>
+      <section>
         <h2>Mis Servicios</h2>
             <div class="Servicios">
 
@@ -90,43 +93,46 @@
                 </section>
 
             </div>
-    </section>
+        </section>
 
-    <h2>Contacto</h2>
+        <h2>Contacto</h2>
 
-    <div class="form-container">
-        <form class="formulario">
-            <fieldset>
-                <legend >Contactanos llenando todos los campos</legend>
-                <div class="campo-contenedor">
+        <div class="form-container">
+            <form class="formulario">
+                <fieldset>
+                    <legend >Contactános llenando todos los campos</legend>
+                    <div class="campo-contenedor">
 
-                    <div class="campo1">
-                        <label>Nombre</label>
-                        <input class="type-text" type="text" placeholder="Tu Nombre" id="Nombre">
+                        <div class="campo1">
+                            <label>Nombre</label>
+                            <input class="type-text" type="text" placeholder="Tu Nombre" id="Nombre">
+                        </div>
+
+                        <div class="campo2">
+                            <label>Telefono</label>
+                            <input class="type-text" type="tel" placeholder="Tu Telefono" id="Telefono">
+                        </div>
                     </div>
-
-                    <div class="campo2">
-                        <label>Telefono</label>
-                        <input class="type-text" type="tel" placeholder="Tu Telefono" id="Telefono">
+    
+                    <div class="campo3">
+                        <label>Correos</label>
+                        <input class="type-text" type="email" placeholder="Tu Email" id="Email">
                     </div>
-                </div>
     
-                <div class="campo3">
-                    <label>Correos</label>
-                    <input class="type-text" type="email" placeholder="Tu Email" id="Email">
-                </div>
-    
-                <div class="campo4">  
-                    <label >Mensaje</label>
-                    <textarea class="type-text"></textarea>
-                </div>
+                    <div class="campo4">
+                        <label >Mensaje</label>
+                        <textarea class="type-text"></textarea>
+                    </div>
                 
-                <div class="boton-enviar">
-                    <button>Enviar</button>
-                </div>
-            </fieldset>
-          </form>
-    </div>
+                    <div class="boton-enviar">
+                        <button>Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>  
+    </main>
+
+    
       
       
     <footer>Todos los derechos reservados. EG EDTECNICA</footer>
