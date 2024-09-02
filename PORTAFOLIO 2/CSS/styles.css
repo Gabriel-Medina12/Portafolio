@@ -1,0 +1,110 @@
+:root{
+    --primario: #17b2e3;
+    --primarioOscuro: #3660f7;
+    --secundario: #04e2e2;
+    --secundarioOscuro: rgba(2,83,233);
+    --blanco: #fff;
+    --negro: #000;
+    --fuentePrincipal: "Staatliches", system-ui;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--primario);
+    line-height: 1,5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-style: 2.4rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+
+/*BEM
+BLOCK = BLOQUES (header)
+ELEMENT = ELEMENTOS (header__logo)
+MODIFIER = MODIFICADORES
+*/
+
+/*css header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+/*css navegacion*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding:1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion__enlace:hover,.navegacion__enlace--activo{
+    color: var(--secundario);
+
+}
+
+/*css footer*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2.2rem;
+}
+
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
