@@ -1,0 +1,50 @@
+:root{
+    --table-bg-color-1: #222;
+    --table-bg-color-2: #111;
+    --table-alt-bg-color: #1a1a1a;
+    --table-th-border: #999;
+    --table-tr-border: #333;
+    --table-text-color: #eee;
+    --scrollbar-hover-color: #91c733;
+    --scrollbar-track-color: #333;
+    --table-shadow: linear-gradient(90deg, rgba(0, 0, 0, .5), transparent);
+    --fa-style-family-classic: "Font Awesome 6 Pro";
+    --fa-style-family-duotone: "Font Awesome 6 Duotone";
+    --fa-style-family-sharp: "Font Awesome 6 Sharp";
+    --fa-family: NVIDIA-NALA, Arial, Helvetica, Sans-Serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    color: #000;
+    font-family: var(--fa-family);
+    font-variant-numeric: proportional-nums;
+    font-weight: 400;
+    height: 100%;
+    min-width: 20pc;
+}
+
+a{
+    color: var(--table-th-border);
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+label{
+    color: var(--table-th-border);
+}
+
+
+/*------------------- Header y Nav -------------------*/
