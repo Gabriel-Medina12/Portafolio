@@ -1,0 +1,42 @@
+:root{
+    --table-bg-color-1: #222;
+    --table-bg-color-2: #111;
+    --table-alt-bg-color: #1a1a1a;
+    --table-th-border: #999;
+    --table-tr-border: #333;
+    --table-text-color: #eee;
+    --scrollbar-hover-color: #91c733;
+    --scrollbar-track-color: #333;
+    --fa-style-family-classic: "Font Awesome 6 Pro";
+    --fa-style-family-duotone: "Font Awesome 6 Duotone";
+    --fa-style-family-sharp: "Font Awesome 6 Sharp";
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h3{
+    cursor: pointer;
+}
+
+.Nvidia-logo{
+    width: 120px;
+    margin: 10px 10px
+}
+
+.submenu{
+    display: flex;
+    flex-direction: row;
+}
+
+.Nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--table-text-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+

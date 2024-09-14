@@ -1,0 +1,240 @@
+:root{
+    --table-bg-color-1: #222;
+    --table-bg-color-2: #111;
+    --table-alt-bg-color: #1a1a1a;
+    --table-th-border: #999;
+    --table-tr-border: #333;
+    --table-text-color: #eee;
+    --scrollbar-hover-color: #91c733;
+    --scrollbar-track-color: #333;
+    --table-shadow: linear-gradient(90deg, rgba(0, 0, 0, .5), transparent);
+    --fa-style-family-classic: "Font Awesome 6 Pro";
+    --fa-style-family-duotone: "Font Awesome 6 Duotone";
+    --fa-style-family-sharp: "Font Awesome 6 Sharp";
+    --fa-family: NVIDIA-NALA, Arial, Helvetica, Sans-Serif;
+}
+/*
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo {
+    width: 120px;
+    margin-right: 20px;
+}
+.nav-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-items li {
+    margin: 0 15px;
+    position: relative;
+}
+.nav-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #333;
+}
+.cart {
+    position: relative;
+}
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #76b900;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 100vw;
+    z-index: 1000;
+}
+.nav-items li:hover .submenu {
+    display: block;
+}
+.submenu-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+.submenu-header a {
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+.submenu-header a.active {
+    text-decoration:underline 2px solid #76b900;
+    
+}
+.submenu-content {
+    display: flex;
+    justify-content: space-between;
+}
+.submenu-column {
+    flex: 1;
+}
+.submenu-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.submenu-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.submenu-column li {
+    margin-bottom: 5px;
+}
+
+.nav-right a{
+    text-decoration: none;
+}
+*/
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--table-text-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.Nvidia-logo{
+    width: 120px;
+    margin: 10px 70px
+}
+
+.nav-items{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-items li{
+    list-style-type: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: var(--table-tr-border);
+    font-size: 18px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a{
+    text-decoration: none;
+}
+
+.icon {
+    margin-left: 20px;
+    font-size: 18px;
+    color:var(--table-tr-border);
+}
+
+.submenu-header a{
+    font-size: 18px;
+}
+
+.submenu-content {
+    display: flex;
+    justify-content: space-between;
+}
+.submenu-column {
+    flex: 1;
+}
+.submenu-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.submenu-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.submenu-column li {
+    margin-bottom: 5px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #76b900;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.nav-items li:hover .submenu {
+    display: block;
+}
+
+.submenu-header a.Hardware{
+    text-decoration:underline 2px solid #76b900;
+}
+
+.submenu-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.submenu-header a {
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+
+
+.Main-Header{
+    display: flex;
+    justify-content: space-between;
+}
