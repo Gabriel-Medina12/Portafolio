@@ -117,7 +117,7 @@ body, html {
     text-decoration: none;
 }
 */
-.nav {
+/*.nav {
     display: flex;
     align-items: center;
     padding: 15px 25px;
@@ -237,4 +237,97 @@ body, html {
 .Main-Header{
     display: flex;
     justify-content: space-between;
+}*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.nav-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.logo {
+    color: #76b900;
+    font-weight: bold;
+    font-size: 24px;
+}
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown > summary {
+    list-style: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+.dropdown[open] .dropdown-content {
+    display: block;
+}
+.dropdown-section {
+    margin-bottom: 15px;
+}
+.dropdown-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+.dropdown-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-section li {
+    margin-bottom: 5px;
+}
+.dropdown-section a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.dropdown-section a:hover {
+    color: #76b900;
+}
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+.right-nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
