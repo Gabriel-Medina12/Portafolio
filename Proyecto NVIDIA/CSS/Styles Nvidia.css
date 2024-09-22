@@ -75,7 +75,7 @@ body {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
     padding: 10px;
@@ -88,7 +88,7 @@ body {
 }
 .dropdown-section h3 {
     margin: 0 0 10px 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 .dropdown-section ul {
     list-style-type: none;
@@ -96,10 +96,10 @@ body {
     margin: 0;
 }
 .dropdown-section li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .dropdown-section a {
-    font-size: 12px;
+    font-size: 13px;
     color: #666;
     text-decoration: none;
 }
@@ -133,7 +133,6 @@ body {
 .cart {
     position: relative;
 }
-
 .cart-badge {
     position: absolute;
     top: -8px;
@@ -174,8 +173,8 @@ body {
 .dropdown-content-2 {
     display: none;
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
+    background-color: var(--table-text-color);
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -185,8 +184,8 @@ body {
 .dropdown-section-2{
     display: none;
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
+    background-color: var(--table-text-color);
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     left: 100%;
@@ -194,14 +193,14 @@ body {
     top: 20px;
     right: auto;
 }
-.dropdown-content-2:hover .dropdown-section-2{
+.dropdow-graficas:hover .dropdown-section-2{
     display: block;
 }
 .dropdown-section-3{
     display: none;
     position: absolute;
-    background-color: #333;
-    min-width: 160px;
+    background-color: var(--table-text-color);
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     left: 100%;
@@ -209,7 +208,7 @@ body {
     top: 20px;
     right: auto;
 }
-.dropdown-content-2:hover .dropdown-section-3{
+.dropdown-laptops:hover .dropdown-section-3{
     display: block;
 }
 .dropdown-content-2 a {
@@ -394,7 +393,7 @@ figure {
     background-image: url(../IMG/nvidia-dlss-video-xlrg-hero-background-bb770-d.jpg);
     background-size: cover;
     background-position: center;
-    height: 160vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,10 +411,10 @@ figure {
     font-size: 18px;
 }
 .title-text-2 h3{
-    font-size: 30px;
+    font-size: 35px;
 }
 .title-text-2 p{
-    font-size: 18px;
+    font-size: 15px;
     margin: 2rem 15rem;
     line-height: 2rem;
 }
@@ -423,10 +422,7 @@ figure {
     color: var(--table-text-color);
     font-size: 18px;
 }
-.arrow{
-    fill: var(--scrollbar-hover-color);
-    width: 15px;
-}
+
 .DLSS iframe{
     margin-top: 40px;
 }
@@ -438,15 +434,18 @@ figure {
 .black{
     color: var(--table-text-color);
     background-color: var(--black);
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
 }
 .black p{
-    margin:0 10rem ;
+    margin:0 1rem ;
+    margin-top: -38px;
+    line-height: 1.5rem;
+    font-size: 15px;
 }
 .cyberpunk img{
-    width: 150px;
-    translate: 32rem 0rem;
+    width: 200px;
+    translate: 32rem 2rem;
 }
 /*---------------------------------- CREATE ---------------------------------*/
 .crear{
@@ -507,14 +506,7 @@ figure {
     color: var(--table-text-color);
     font-weight: bolder;
 }
-.arrow-2{
-    fill: var(--scrollbar-hover-color);
-    width: 13px;
-}
-.arrow1{
-    fill: var(--scrollbar-hover-color);
-    width: 13px;
-}
+
 /*----------------------------------- JUEGOS RTX ---------------------------------*/
 .games{
     background-color: var(--black);
@@ -692,6 +684,9 @@ hr{
 .lp-conocer{
     margin-top: 2rem;
     font-size: 20px;
+}
+.arrow{
+    translate: 0rem 4px;
 }
 /*------------------------------ IMAGEN PEQUE ------------------------------*/
 .casi-footer{
