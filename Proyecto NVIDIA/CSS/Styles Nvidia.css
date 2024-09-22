@@ -253,7 +253,7 @@ body {
 }
 /*--------------------------- NAV GENERAL -----------------------------*/
 .nv-main{
-    background-color: var(--table-alt-bg-color);
+    background-color: var(--table-bg-color-1);
     font-family: NVIDIA, Arial, Helvetica, Sans-Serif;
     padding: 15px 25px;
     display: flex;
@@ -446,8 +446,7 @@ figure {
 }
 .cyberpunk img{
     width: 150px;
-    display: flex;
-    
+    translate: 32rem 0rem;
 }
 /*---------------------------------- CREATE ---------------------------------*/
 .crear{
@@ -594,11 +593,12 @@ figure {
 }
 /*------------------------------ MARGIN -------------------------*/
 .star-wars, .portal-with, .cyberpunk-ultimate, .spider-man, .minecraft, .witchfire, .warhammer{
-    margin: 2rem 1rem 2rem 8rem;
+    margin: 2rem 1rem 2rem 1rem;
     line-height: 1.5em;
 }
 .black-myth, .racer-rtx, .the-witcher, .fortnite, .flight-simulator, .throne, .need-for-speed{
-    margin: 2rem 8rem 2rem 1rem;
+    margin: 2rem 1rem 2rem 1rem;
+    line-height: 1.5rem;
 }
 .star-wars a, .portal-with a, .cyberpunk-ultimate a, .spider-man a, .minecraft a, .witchfire a, .warhammer a{
     font-weight: bold;
@@ -608,4 +608,103 @@ figure {
 }
 .spaceAS{
     margin-top: 1.5rem;
+}
+hr{
+    margin: 5rem;
+}
+.mas-juegos{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 3rem;
+}
+/*---------------------------------- MAS JUEGOS RTX ---------------------------------*/
+.rtx-more-games{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.nakara-img img, .remastered-img img, .people-img img, .destroy-img img, .WRC-img img, .plague-img img, .lord-img img, .steelrising-img img, .ghostwire-img img{
+    width: 100%;
+    box-sizing: border-box;
+}
+.nakara, .Spider-man-remastered, .super-people, .destroy-humans, .WRC-Generations, .A-Plague-Tale, .the-lord, .steelrising, .ghostwire{
+    margin: 1rem;
+    line-height: 1.5rem;
+}
+.nakara a, .Spider-man-remastered a, .super-people a, .destroy-humans a, .WRC-Generations a, .A-Plague-Tale a, .the-lord a, .steelrising a, .ghostwire a{
+    font-weight: bold;
+}
+.button-games a{
+    background: var(--scrollbar-hover-color);
+    color: var(--black);
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.button-games{
+    text-align: center;
+    margin: 5rem;
+}
+/*------------------------------ BUY GEFORCE RTX ----------------------------*/
+.title-buy-geforce{
+    text-align: center;
+    font-size: 30px;
+}
+.compra-rtx{
+    background-color: var(--table-bg-color-1);
+    padding: .5rem;
+    color: var(--table-text-color);
+}
+.store-buy{
+    width: 30px;
+    translate: 0px 8px ;
+}
+.buy-geforce a{
+    color: var(--table-text-color);
+}
+.buy-geforce{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+}
+.buy-geforce h3{
+    font-size: 30px;
+}
+.tj-gr-comprar a{
+    background-color: var(--scrollbar-hover-color);
+    padding: 15px 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+.tj-gr-conocer{
+    margin-top: 2rem;
+    font-size: 20px;
+}
+.lp-notificarme a{
+    background-color: var(--scrollbar-hover-color);
+    padding: 15px 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+.lp-conocer{
+    margin-top: 2rem;
+    font-size: 20px;
+}
+/*------------------------------ IMAGEN PEQUE ------------------------------*/
+.casi-footer{
+    background-color: #000;
+}
+.imagen-peque img{
+    margin-top: 3rem;
+    translate: 600px 0px;
+    width: 6rem;
+}
+.span-legal{
+    color: var(--table-th-border);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 2rem;
 }
