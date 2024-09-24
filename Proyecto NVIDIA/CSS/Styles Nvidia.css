@@ -703,3 +703,80 @@ hr{
     text-align: center;
     margin-top: 2rem;
 }
+.legal-hr {
+    border: 1px solid var(--table-th-border);
+    width: 100%;
+    margin: 0 0 2rem 0rem;
+ }
+ .hr{
+    margin: 4rem 2rem 0rem 0rem;
+ }
+ .grid-legal{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+ }
+ .grid-legal h3{
+    color: var(--table-text-color);
+    font-size: 25px;
+ }
+ .grid-legal a{
+    color: var(--scrollbar-hover-color);
+    display: flex;
+    margin-bottom: 1rem;
+ }
+ .productos{
+    margin: 2rem;
+ }
+ .comunidad{
+    margin: 2rem;
+ }
+ .soporte{
+    margin: 2rem;
+ }
+ .follow{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: right;
+    translate: -20px -20px;
+ }
+ .follow-text{
+    color: var(--table-th-border);
+    margin-right: 20px;
+ }
+ .follow a{
+    fill: var(--table-th-border);
+    margin: 10px;
+ }
+ .follow svg{
+    width: 22px;
+    height: 22px;
+ }
+/*----------------------------------- FOOTER -------------------------------------*/
+.global-footer__logo{
+    margin-left: 2rem;
+}
+.span-mexico a{
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    color: var(--table-th-border);
+    margin-top: -60px;
+    margin-right: 2rem;
+}
+.politicas li{
+    display: inline-block;
+    margin-right: 5px;
+    padding-right: 10px;
+    position: relative;
+}
+.politicas a{
+    color: var(--table-th-border);
+}
+.copyright{
+    font-size: 12px;
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: -10px;
+    color: var(--table-th-border);
+}
