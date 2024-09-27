@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="../CSS/Styles Nvidia.css">
     <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="icon" href="../IMG/nvidia_logo_icon_169902.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="main-header">
 <!------------------- NAV NVIDIA --------------------->
         <nav class="nav-container">
-            <div class="main-nav">
+            <div class="main-nav burger">
                 <div class="logo">
                     <a href="#" class="logoNvidia">
                         <img src="../IMG/NVIDIA_logo.svg.png" alt="logoNvidia" width="120">
                     </a>
                 </div>
-                <ul class="nav-links">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-links menu">
                     <li>
                         <details class="dropdown">
                             <summary>Productos</summary>
@@ -99,9 +105,11 @@
                 </ul>
                 <div class="nav-right">
                     <div>
-                        <a href="#" class="icon">Comprar</a>
-                        <a href="#" class="icon">Drivers</a>
-                        <a href="#" class="icon">Soporte</a>
+                        <ul class="menu-2">
+                            <a href="#" class="icon">Comprar</a>
+                            <a href="#" class="icon">Drivers</a>
+                            <a href="#" class="icon">Soporte</a>
+                        </ul>
                     </div>
                     
                     <a href="#" class="icon">
@@ -120,7 +128,7 @@
 <!---------------------------- NAV GEFORCE -------------------------------->
         <nav class="GeForce-nav" id="navbar">
             <div class="logo">GeForce</div>
-            <div class="nav-links">
+            <div class="nav-links nav-bar">
                 <div class="dropdown-2">
                     <a href="#">Productos ▼</a>
                     <div class="dropdown-content-2">
@@ -166,7 +174,7 @@
                         <a href="#">DirectX 12</a>
                     </div>
                 </div>
-                <div>
+                <div class="menu-2">
                     <a href="#">GeForce Experience</a>
                     <a href="#">Drivers</a>
                     <a href="#">Noticias</a>
@@ -183,6 +191,74 @@
                     </div>
                 </div>
             </div>
+            <input type="checkbox" id="checkbl">
+            <label for="checkbl" class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="dropdown-menu-bars">
+                <div class="dropdown-2">
+                    <a href="#">Productos ▼</a>
+                    <div class="dropdown-content-2">
+                        <div class="dropdow-graficas">
+                            <a href="#">Tarjetas gráficas ▶</a>
+                            <div class="dropdown-section-2">
+                                <a href="#">RTX Serie 40</a>
+                                <a href="#">RTX 4090</a>
+                                <a href="#">Familia RTX 4080</a>
+                                <a href="#">Familia RTX 4070</a>
+                                <a href="#">Familia RTX 4060</a>
+                                <a href="#">RTX Serie 30</a>
+                                <a href="#">RTX Serie 20</a>
+                                <a href="#">GTX Serie 16</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-laptops">
+                            <a href="#">Laptops ▶</a>
+                            <div class="dropdown-section-3">
+                                <a href="#">RTX 40 Series Laptops</a>
+                                <a href="#">RTX 30 Series Laptops</a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <a href="#">G-SYNC Monitors</a>
+                            <a href="#">GeForce NOW Cloud Gaming</a>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="dropdown-2">
+                    <a href="#">Games y Tecnología ▼</a>
+                    <div class="dropdown-content-2">
+                        <a href="#">RTX Games</a>
+                        <a href="#">DLSS</a>
+                        <a href="#">Reflex</a>
+                        <a href="#">Broadcasting</a>
+                        <a href="#">Studio</a>
+                        <a href="#">RTX Remix</a>
+                        <a href="#">Max-Q</a>
+                        <a href="#">8K HDR</a>
+                        <a href="#">DirectX 12</a>
+                    </div>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#">GeForce Experience</a>
+                    <a href="#">Drivers</a>
+                    <a href="#">Noticias</a>
+                    <a href="#">Soporte</a>
+                </div>
+                
+                <div class="dropdown-2">
+                    <a href="#">Comprar ▼</a>
+                    <div class="dropdown-content-2">
+                        <a href="#">Donde Comprar</a>
+                        <a href="#">Ofertas GeForce</a>
+                        <a href="#">Regreso a Clases</a>
+                        <a href="#">Bundle Star Wars™ Outlaws</a>
+                    </div>
+                </div>
+            </div>
+
         </nav>
     </header>
 <!---------------------- RTX. ITS ON ---------------------->
@@ -877,7 +953,7 @@
                         Comprar
                     </a>
                 </div>
-                <div class="tj-gr-conocer">
+                <div class="lp-conocer">
                     <a href="#">
                         Conoce Más
                         <svg class="arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 16 16">
@@ -953,23 +1029,27 @@
             </div>
         </div>
         <div class="follow">
+            <div class="follow-content">
                 <div class="follow-text">Follow GeForce</div>
-                <a href="#">
-                    <svg enable-background="new 0 0 512 512" width="16" height="16" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M304,383c0,40.2-0.1,80.3,0.1,120.5c0,4.4-1.2,5.6-5.6,5.5c-34.2-0.2-68.3-0.2-102.5,0   c-4.7,0-6.2-1.1-6.2-6c0.2-79.7,0.1-159.3,0.1-239c0-8,0.9-7-7.3-7.1c-14.5,0-29-0.1-43.5,0.1c-3.5,0-4.5-1.1-4.5-4.6   c0.1-25.3,0.1-50.7,0-76c0-3.5,1-4.6,4.5-4.5c15.2,0.2,30.3-0.1,45.5,0.2c4.1,0.1,5.4-1,5.4-5.3c-0.2-21.3,0-42.7-0.1-64   c-0.1-17.7,2.6-34.8,11.5-50.4c9.6-17,24-28.7,41.8-36.3c15-6.4,30.8-9.4,47-10.3c32.1-1.8,64.3-0.3,96.4-0.9   c3.6-0.1,4.5,1.2,4.5,4.6c-0.1,26.3-0.1,52.7,0,79c0,4-1.5,4.6-5,4.6c-18.5-0.1-37-0.1-55.5-0.1c-15.4,0-26.5,11.1-26.5,26.3   c0,15.7,0.2,31.3-0.1,47c-0.1,4.5,1.4,5.6,5.7,5.6c25.3-0.2,50.7,0,76-0.2c4.2,0,5.6,1.2,5.1,5.4c-1.5,12.9-2.8,25.8-4.2,38.7   c-1.3,12.4-3.5,24.7-5.5,37c-0.6,3.5-1.7,4.3-4.9,4.3c-21.7-0.1-43.3-0.1-65,0c-8.5,0-7.3-1.1-7.3,7.5C304,304,304,343.5,304,383z" fill="#A7A7A7"/></g></svg></a>
-                <a href="#">
-                    <svg enable-background="new 0 0 512 512" width="16" height="16" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M505,257c0,35.8,0.1,71.6,0,107.5c-0.2,52-24.4,90.5-67.6,117.7C412.1,498,384,505,354.2,505   c-65.2,0-130.3,0.3-195.5-0.1c-45.3-0.3-84.3-16.3-115.2-49.9c-19.1-20.8-30.5-45.3-33.8-73.6c-0.7-6-0.8-11.9-0.8-17.9   c0-71.3-0.1-142.6,0-213.9C9.2,97.5,33.4,59,76.6,31.8C102.1,15.9,130.3,9,160.3,9c65,0,130-0.3,195,0.1   c45.5,0.3,84.6,16.4,115.5,50.2c18.9,20.7,30.2,45.2,33.4,73.2c1.3,11,0.7,22,0.8,32.9C505.1,196,505,226.5,505,257z M46,257   c0,36.7-0.1,73.3,0,110c0.1,25.2,9.3,46.9,26.5,64.9c23.1,24.1,51.9,35.8,85,36c65.7,0.4,131.3,0.1,197,0.1   c21.2,0,41.4-4.6,59.8-15.2c34.4-19.7,53.8-48.7,53.8-89.3c0-72.2,0-144.3,0-216.5c0-25-9.1-46.6-26.2-64.5   c-22.9-24.2-51.8-36.1-84.8-36.3C290.7,45.7,224.4,46,158,46c-20.7,0-40.3,4.9-58.3,15.1C65.4,80.9,45.9,109.9,46,150.5   C46,186,46,221.5,46,257z" fill="#A7A7A7"/><path d="M257.3,363c-64.6,0-116.4-51.6-116.3-116c0.1-62.7,52.6-114.1,116.7-114c64.4,0,116.4,51.7,116.3,115.5   C373.9,311.7,321.6,363,257.3,363z M257.3,326c43.9,0,79.7-34.9,79.7-77.8c0-43.1-35.5-78.2-79.3-78.2c-43.9,0-79.7,34.9-79.7,77.8   C178,290.9,213.5,326,257.3,326z" fill="#A7A7A7"/><path d="M363,123.6c0-14.2,10.9-25.6,24.5-25.6c13.6,0,24.5,11.5,24.5,25.6c0,13.9-10.9,25.3-24.3,25.4   C374.1,149.1,363,137.8,363,123.6z" fill="#A7A7A7"/></g></svg></a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-tiktok" viewBox="0 0 16 16">
-                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                  </svg>
-                </a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                  </svg>
-                </a>
-                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-youtube" viewBox="0 0 16 16">
-                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-                  </svg>
-                </a>
+                <div class="icon-follow">
+                    <a href="#">
+                        <svg enable-background="new 0 0 512 512" width="16" height="16" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M304,383c0,40.2-0.1,80.3,0.1,120.5c0,4.4-1.2,5.6-5.6,5.5c-34.2-0.2-68.3-0.2-102.5,0   c-4.7,0-6.2-1.1-6.2-6c0.2-79.7,0.1-159.3,0.1-239c0-8,0.9-7-7.3-7.1c-14.5,0-29-0.1-43.5,0.1c-3.5,0-4.5-1.1-4.5-4.6   c0.1-25.3,0.1-50.7,0-76c0-3.5,1-4.6,4.5-4.5c15.2,0.2,30.3-0.1,45.5,0.2c4.1,0.1,5.4-1,5.4-5.3c-0.2-21.3,0-42.7-0.1-64   c-0.1-17.7,2.6-34.8,11.5-50.4c9.6-17,24-28.7,41.8-36.3c15-6.4,30.8-9.4,47-10.3c32.1-1.8,64.3-0.3,96.4-0.9   c3.6-0.1,4.5,1.2,4.5,4.6c-0.1,26.3-0.1,52.7,0,79c0,4-1.5,4.6-5,4.6c-18.5-0.1-37-0.1-55.5-0.1c-15.4,0-26.5,11.1-26.5,26.3   c0,15.7,0.2,31.3-0.1,47c-0.1,4.5,1.4,5.6,5.7,5.6c25.3-0.2,50.7,0,76-0.2c4.2,0,5.6,1.2,5.1,5.4c-1.5,12.9-2.8,25.8-4.2,38.7   c-1.3,12.4-3.5,24.7-5.5,37c-0.6,3.5-1.7,4.3-4.9,4.3c-21.7-0.1-43.3-0.1-65,0c-8.5,0-7.3-1.1-7.3,7.5C304,304,304,343.5,304,383z" fill="#A7A7A7"/></g></svg></a>
+                    <a href="#">
+                        <svg enable-background="new 0 0 512 512" width="16" height="16" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M505,257c0,35.8,0.1,71.6,0,107.5c-0.2,52-24.4,90.5-67.6,117.7C412.1,498,384,505,354.2,505   c-65.2,0-130.3,0.3-195.5-0.1c-45.3-0.3-84.3-16.3-115.2-49.9c-19.1-20.8-30.5-45.3-33.8-73.6c-0.7-6-0.8-11.9-0.8-17.9   c0-71.3-0.1-142.6,0-213.9C9.2,97.5,33.4,59,76.6,31.8C102.1,15.9,130.3,9,160.3,9c65,0,130-0.3,195,0.1   c45.5,0.3,84.6,16.4,115.5,50.2c18.9,20.7,30.2,45.2,33.4,73.2c1.3,11,0.7,22,0.8,32.9C505.1,196,505,226.5,505,257z M46,257   c0,36.7-0.1,73.3,0,110c0.1,25.2,9.3,46.9,26.5,64.9c23.1,24.1,51.9,35.8,85,36c65.7,0.4,131.3,0.1,197,0.1   c21.2,0,41.4-4.6,59.8-15.2c34.4-19.7,53.8-48.7,53.8-89.3c0-72.2,0-144.3,0-216.5c0-25-9.1-46.6-26.2-64.5   c-22.9-24.2-51.8-36.1-84.8-36.3C290.7,45.7,224.4,46,158,46c-20.7,0-40.3,4.9-58.3,15.1C65.4,80.9,45.9,109.9,46,150.5   C46,186,46,221.5,46,257z" fill="#A7A7A7"/><path d="M257.3,363c-64.6,0-116.4-51.6-116.3-116c0.1-62.7,52.6-114.1,116.7-114c64.4,0,116.4,51.7,116.3,115.5   C373.9,311.7,321.6,363,257.3,363z M257.3,326c43.9,0,79.7-34.9,79.7-77.8c0-43.1-35.5-78.2-79.3-78.2c-43.9,0-79.7,34.9-79.7,77.8   C178,290.9,213.5,326,257.3,326z" fill="#A7A7A7"/><path d="M363,123.6c0-14.2,10.9-25.6,24.5-25.6c13.6,0,24.5,11.5,24.5,25.6c0,13.9-10.9,25.3-24.3,25.4   C374.1,149.1,363,137.8,363,123.6z" fill="#A7A7A7"/></g></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                      </svg>
+                    </a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                      </svg>
+                    </a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#999" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                      </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
@@ -1005,7 +1085,7 @@
                 <li>
                     <a href="#">Seguridad del Producto</a>
                 </li>
-               <li>
+               <li class="contactenos">
                     <a href="#">Contáctenos</a>
                 </li>
             </ul>

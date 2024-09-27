@@ -30,6 +30,17 @@ body {
 }
 
 /*----------------------------------- NAV PRINCIPAL------------------------------------- */
+.checkbtn{
+    font-size: 20px;
+    color: var(--table-th-border);
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
 .nav-container {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -124,6 +135,7 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 5px;
+    margin-top: 13px;
 }
 .Hardware-Software{
     color: var(--table-tr-border);
@@ -144,6 +156,33 @@ body {
     font-size: 12px;
 }
 /*----------------------------- NAV GeForce ------------------------------*/
+#checkbl{
+    display: none;
+}
+ .toggle-btn{
+    color: var(--table-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.dropdown-menu-bars a{
+    color: var(--table-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.dropdown-menu-bars{
+    position: absolute;
+    right: 5rem;
+    top: 120px;
+    width: 300px;
+    height: 350px;
+    background: var(--black);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
 .GeForce-nav {
     background-color: var(--black);
     font-family: NVIDIA, Arial, Helvetica, Sans-Serif;
@@ -455,11 +494,10 @@ figure {
     background-color: var(--black);
 }
 .studio{
-    margin: 2rem;
+    margin: 1rem;
 }
 .studio img{
     width: 100%;
-    box-sizing: border-box;
 }
 .text-studio h2{
     font-size: 15px;
@@ -479,13 +517,12 @@ figure {
     color: var(--table-text-color);
     font-weight: bolder;
 }
-.Broadcast{
-    margin-top: 2rem;
+.Broadcasting{
+    margin: 1rem;
 }
 .Broadcasting img{
     width: 100%;
-    box-sizing: border-box;
-    height: 275px;
+    height: 315px;
 }
 .text-broadcast h2{
     font-size: 15px;
@@ -499,7 +536,7 @@ figure {
     font-size: 16px;
     color: var(--table-text-color);
     line-height: 1.5em;
-    margin-bottom: 8.1rem;
+    margin-bottom: 6.5rem;
 }
 .text-broadcast a{
     font-size: 15px;
@@ -669,10 +706,6 @@ hr{
     color: #000;
     font-weight: bold;
 }
-.tj-gr-conocer{
-    margin-top: 2rem;
-    font-size: 20px;
-}
 .lp-notificarme a{
     background-color: var(--scrollbar-hover-color);
     padding: 15px 15px;
@@ -693,9 +726,10 @@ hr{
     background-color: #000;
 }
 .imagen-peque img{
-    margin-top: 3rem;
-    translate: 600px 0px;
-    width: 6rem;
+    margin: 0 auto;
+    display: flex;
+    vertical-align: middle;
+    max-width: 96px;
 }
 .span-legal{
     color: var(--table-th-border);
@@ -733,20 +767,20 @@ hr{
  .soporte{
     margin: 2rem;
  }
- .follow{
+ .follow-content{
     display: flex;
-    align-items: center;
     justify-content: end;
+    align-items: center;
     text-align: right;
-    translate: -20px -20px;
+    width: 100%;
  }
  .follow-text{
     color: var(--table-th-border);
-    margin-right: 20px;
+    margin-right: 30px;
  }
  .follow a{
     fill: var(--table-th-border);
-    margin: 10px;
+    margin: 8px;
  }
  .follow svg{
     width: 22px;
@@ -779,4 +813,716 @@ hr{
     margin-bottom: 2rem;
     margin-top: -10px;
     color: var(--table-th-border);
+}
+
+@media (min-width:500px) and (max-width:768px) {
+    .copyright{
+        font-size: 10px;
+        text-align: center;
+    }
+    .politicas{
+        margin-top: 40px;
+    }
+    .global-footer__logo{
+        float: none;
+        translate: 270px 0px;
+    }
+    .span-mexico span{
+        translate: -340px 20px;
+    }
+    .follow-content{
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        width: 100%;
+     }
+     .follow-text{
+        translate: 80px -30px;
+     }
+     .icon-follow{
+        translate: 20px -20px;
+     }
+    .grid-legal{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .buy-geforce{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .follow svg{
+        width: 18px;
+        height: 18px;
+        translate: -120px 15px;
+    }
+    .imagen-peque img{
+        margin: 0 auto;
+        display: flex;
+        vertical-align: middle;
+        max-width: 85px;
+    }
+    .span-legal{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .compra-rtx h3{
+        font-size: 20px;
+    }
+    .lp-conocer{
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+    
+    .lp-notificarme a{
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar a{
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar img{
+        width: 20px;
+        height: 20px;
+        translate: 0px 4px;
+    }
+    .rtx-more-games{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .button-games a{
+        padding: 8px 12px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .button-games{
+        text-align: center;
+        margin: 1rem;
+    }
+    .nakara, .Spider-man-remastered, .super-people, .destroy-humans, .WRC-Generations, .A-Plague-Tale, .the-lord, .steelrising, .ghostwire{
+        margin: 0 0 1rem 0;
+    }
+    .mas-juegos{
+        font-size: 16px;
+    }
+    .rtx-juegos{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title-games{
+        font-size: 15px;
+    }
+    .crear{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2rem;
+    }
+    .Broadcasting img{
+        width: 100%;
+        height: 275px;
+    }
+    .text-broadcast p{
+        margin-bottom: 1rem;
+    }
+    .studio img{
+        width: 100%;
+    }
+    .cyberpunk img{
+        display: none;
+    }
+    .black p{
+        margin:0 3.5rem ;
+        margin-top: -65px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+    .DLSS iframe{
+        width: 600px;
+        height: 400px;
+    }
+    .DLSS{
+        height: 120vh;
+    }
+    .Funciona a{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .title-text-2 p{
+        font-size: 15px;
+        margin: 0rem 7.2rem;
+        line-height: 1.5rem;
+    }
+    .title-text-2 h2{
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .title-text h2{
+        font-size: 16px;
+    }
+    .title-text h3{
+        font-size: 25px;
+    }
+    .title-text p{
+        font-size: 15px;
+        margin: 0px 4rem;
+        line-height: 1.5rem;
+    }
+    .conocer iframe{
+        width: 600px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .conocer{
+        height: 50vh;
+    }
+    .conocer h2{
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .buy-boton{
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+    .img-500 {
+        height: 30vh;
+    }
+    .cta-button {
+        padding: 0.5rem .75rem;
+        font-size: 13px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .RTX-{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--table-text-color);
+    }
+    .parrafo {
+        font-size: 15px;
+        max-width: 350px;
+        margin-bottom: 2rem;
+        color: var(--table-text-color);
+    }
+    div.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .logoNvidia{
+        margin-left: 0px;
+        display: flex;
+        justify-items: center;
+        translate: 240px 0px;
+    }
+    .checkbtn{
+        display: block;
+        translate: -320px 0px;
+    }
+    .menu{
+        position: fixed;
+        height: 8rem;
+        background: var(--table-text-color);
+        top: 42px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        text-align:start;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        line-height: 30px;
+    }
+    #check:checked~ul{
+        left: 0;
+        display: block;
+    }
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .toggle-btn{
+        display: block;
+        translate: 400px 0;
+    }
+    .dropdown-menu-bars{
+        display: block;
+    }
+    .dropdown-2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .dropdown-menu{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
+    #checkbl:checked~.dropdown-menu-bars{
+        display: none;
+    }
+    .dropdown-section-2{
+        left: 80%;
+    }
+    .dropdown-section-3{
+        left: 80%;
+    }
+    .menu-2{
+        display: none;
+    }
+}
+@media (min-width:320px) and (max-width:500px) {
+    .copyright{
+        font-size: 10px;
+        text-align: center;
+    }
+    .politicas{
+        margin-top: 40px;
+    }
+    .global-footer__logo{
+        float: none;
+        translate: 160px 0px;
+    }
+    .span-mexico span{
+        translate: -190px 20px;
+    }
+    .follow-content{
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        width: 100%;
+     }
+     .follow-text{
+        translate: 80px -30px;
+     }
+     .icon-follow{
+        translate: 20px -20px;
+     }
+    .grid-legal{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .buy-geforce{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .follow svg{
+        width: 18px;
+        height: 18px;
+        translate: -120px 15px;
+    }
+    .imagen-peque img{
+        margin: 0 auto;
+        display: flex;
+        vertical-align: middle;
+        max-width: 85px;
+    }
+    .span-legal{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .compra-rtx h3{
+        font-size: 20px;
+    }
+    .lp-conocer{
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+    .nv-main{
+        display: none;
+    }
+    .lp-notificarme a{
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar a{
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar img{
+        width: 20px;
+        height: 20px;
+        translate: 0px 4px;
+    }
+    .rtx-more-games{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .button-games a{
+        padding: 8px 12px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .button-games{
+        text-align: center;
+        margin: 1rem;
+    }
+    .nakara, .Spider-man-remastered, .super-people, .destroy-humans, .WRC-Generations, .A-Plague-Tale, .the-lord, .steelrising, .ghostwire{
+        margin: 0 0 1rem 0;
+    }
+    .mas-juegos{
+        font-size: 16px;
+    }
+    .rtx-juegos{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title-games{
+        font-size: 15px;
+    }
+    .crear{
+        grid-template-columns: repeat(1,1fr);
+        padding: 2rem;
+    }
+    .Broadcasting img{
+        width: 100%;
+        height: 275px;
+    }
+    .text-broadcast p{
+        margin-bottom: 1rem;
+    }
+    .studio img{
+        width: 100%;
+    }
+    .cyberpunk img{
+        display: none;
+    }
+    .black p{
+        margin:0 3.5rem ;
+        margin-top: -65px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+    .DLSS iframe{
+        width: 200px;
+        height: 100px;
+    }
+    .DLSS{
+        height: 120vh;
+    }
+    .Funciona a{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .title-text-2 p{
+        font-size: 15px;
+        margin: 0rem 3rem;
+        line-height: 1.5rem;
+    }
+    .title-text-2 h2{
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .title-text h2{
+        font-size: 16px;
+    }
+    .title-text h3{
+        font-size: 25px;
+    }
+    .title-text p{
+        font-size: 15px;
+        margin: 0px 4rem;
+        line-height: 1.5rem;
+    }
+    .conocer iframe{
+        width: 200px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .conocer{
+        height: 50vh;
+    }
+    .conocer h2{
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .buy-boton{
+        margin-left: auto;
+        background-color: var(--scrollbar-hover-color);
+        color: var(--table-bg-color-2);
+        border: none;
+        padding: 6px 14px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .img-500 {
+        height: 30vh;
+    }
+    .cta-button {
+        padding: 0.5rem .75rem;
+        font-size: 13px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .RTX-{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--table-text-color);
+    }
+    .parrafo {
+        font-size: 15px;
+        max-width: 350px;
+        margin-bottom: 2rem;
+        color: var(--table-text-color);
+    }
+    .icon{
+        display: none;
+    }
+    div.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .logoNvidia{
+        margin-left: 0px;
+        display: flex;
+        justify-items: center;
+        translate: 100px 0px;
+    }
+    .checkbtn{
+        display: block;
+        translate: -250px 0px;
+    }
+    .menu{
+        position: fixed;
+        height: 12rem;
+        background: var(--table-text-color);
+        top: 42px;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        text-align:start;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        line-height: 30px;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .toggle-btn{
+        display: block;
+        translate: 70px 0;
+        font-size: 18px;
+    }
+    .dropdown-menu-bars{
+        display: block;
+    }
+    .dropdown-2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .dropdown-menu{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
+    #checkbl:checked~.dropdown-menu-bars{
+        display: none;
+    }
+}
+@media (min-width:769px) and (max-width:1280px){
+    .copyright{
+        font-size: 10px;
+        text-align: center;
+    }
+    .politicas{
+        margin-top: 40px;
+    }
+    .global-footer__logo{
+        float: none;
+        translate: 160px 0px;
+    }
+    .span-mexico span{
+        translate: -190px 20px;
+    }
+    .follow-content{
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        width: 100%;
+     }
+     .follow-text{
+        translate: 80px -30px;
+     }
+     .icon-follow{
+        translate: 20px -20px;
+     }
+    .follow svg{
+        width: 18px;
+        height: 18px;
+        translate: -120px 15px;
+    }
+    .imagen-peque img{
+        margin: 0 auto;
+        display: flex;
+        vertical-align: middle;
+        max-width: 85px;
+    }
+    .span-legal{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .compra-rtx h3{
+        font-size: 20px;
+    }
+    .lp-conocer{
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+    .nv-main{
+        display: none;
+    }
+    .lp-notificarme a{
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar a{
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    .tj-gr-comprar img{
+        width: 20px;
+        height: 20px;
+        translate: 0px 4px;
+    }
+    .button-games a{
+        padding: 8px 12px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .button-games{
+        text-align: center;
+        margin: 1rem;
+    }
+    .nakara, .Spider-man-remastered, .super-people, .destroy-humans, .WRC-Generations, .A-Plague-Tale, .the-lord, .steelrising, .ghostwire{
+        margin: 0 1rem 1rem 1rem;
+    }
+    .mas-juegos{
+        font-size: 16px;
+    }
+    .title-games{
+        font-size: 15px;
+    }
+    .Broadcasting img{
+        width: 100%;
+        height: 230px;
+    }
+    .text-broadcast p{
+        margin-bottom: 1rem;
+    }
+    .studio img{
+        width: 100%;
+    }
+    .cyberpunk img{
+        display: none;
+    }
+    .black p{
+        margin:0 3.5rem ;
+        margin-top: -65px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+    .DLSS{
+        height: 100vh;
+    }
+    .Funciona a{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .title-text-2 p{
+        font-size: 15px;
+        margin: 0rem 3rem;
+        line-height: 1.5rem;
+    }
+    .title-text-2 h2{
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .title-text-2 h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .title-text h2{
+        font-size: 16px;
+    }
+    .title-text h3{
+        font-size: 25px;
+    }
+    .title-text p{
+        font-size: 15px;
+        margin: 0px 4rem;
+        line-height: 1.5rem;
+    }
+    .conocer{
+        height: 50vh;
+    }
+    .conocer h2{
+        font-size: 30px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .buy-boton{
+        margin-left: auto;
+        background-color: var(--scrollbar-hover-color);
+        color: var(--table-bg-color-2);
+        border: none;
+        padding: 6px 14px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .img-500 {
+        height: 30vh;
+    }
+    .cta-button {
+        padding: 0.5rem .75rem;
+        font-size: 13px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .RTX-{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--table-text-color);
+    }
+    .parrafo {
+        font-size: 15px;
+        max-width: 350px;
+        margin-bottom: 2rem;
+        color: var(--table-text-color);
+    }
+    .menu-2{
+        display: none;
+    }
 }
