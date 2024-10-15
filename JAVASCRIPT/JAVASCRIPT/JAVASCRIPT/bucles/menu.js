@@ -14,7 +14,6 @@ var op;
 var rep = true;
 var num1, num2
 var resultado
-var final
 
 do{
     op = parseInt(prompt('Calculadora: \n 1. Suma \n 2. Resta \n 3.Multiplicar \n 4. Dividir \n 5. Salir'))
