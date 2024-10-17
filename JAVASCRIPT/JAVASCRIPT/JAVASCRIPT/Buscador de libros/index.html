@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de libros</title>
+    <link rel="stylesheet" href="./css/buscador.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Buscador de Libros Miticos</h1>
+        </div>
+    </header>
+    <div class="contenedor">
+        
+        <form id="buscador">
+            <div class="row">
+                <div class="three columns">
+                    <label for="tematica">Tematica</label>
+                    <select class="u-full-width" id="tematica">
+                        <option value="">Seleccione</option>
+                        <option value="Literatura Universal">Literatura Universal</option>
+                        <option value="Ficción">Ficción</option>
+                        <option value="Poesía">Poesía</option>
+                        <option value="Narrativa Corta">Narrativa Corta</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Terror">Terror</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="titulo">Titulo</label>
+                    <select class="u-full-width" id="titulo">
+                        <option value="">Seleccione</option>
+                        <option value="Don Quijote de la Mancha">Don Quijote de la Mancha</option>
+                        <option value="Orgullo y Prejuicio">Orgullo y Prejuicio</option>
+                        <option value="Frankenstein o el moderno Prometeo">Frankenstein o el moderno Prometeo</option>
+                        <option value="Los Miserables">Los Miserables</option>
+                        <option value="Moby Dick">Moby Dick</option>
+                        <option value="Cien años de soledad">Cien años de soledad</option>
+                        <option value="El señor de los anillos">El señor de los anillos</option>
+                        <option value="1984">1984</option>
+                        <option value="Un mundo feliz">Un mundo feliz</option>
+                        <option value="Fahrenheit 451">Fahrenheit 451</option>
+                        <option value="La Divina Comedia">La Divina Comedia</option>
+                        <option value="Las flores del mal">Las flores del mal</option>
+                        <option value="Hojas de hierba">Hojas de hierba</option>
+                        <option value="Cantos de Maldoror">Cantos de Maldoror</option>
+                        <option value="Poemas de amor y de guerra">Poemas de amor y de guerra</option>
+                        <option value="Cuentos completos">Cuentos completos</option>
+                        <option value="El corazón de las tinieblas">El corazón de las tinieblas</option>
+                        <option value="La metamorfosis">La metamorfosis</option>
+                        <option value="El viejo y el mar">El viejo y el mar</option>
+                        <option value="La muerte de Iván Ilich">La muerte de Iván Ilich</option>
+                        <option value="Hamlet">Hamlet</option>
+                        <option value="Fuenteovejuna">Fuenteovejuna</option>
+                        <option value="Casa de muñecas">Casa de muñecas</option>
+                        <option value="La gaviota">La gaviota</option>
+                        <option value="Drácula">Drácula</option>
+                        <option value="El retrato de Dorian Gray">El retrato de Dorian Gray</option>
+                        <option value="El resplandor">El resplandor</option>
+                        <option value="El exorcista">El exorcista</option>
+                        <option value="It">It</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="año">Año</label>
+                    <select class="u-full-width" id="año">
+                        <option value="">Seleccione</option>
+                        <option value="1986">1986</option>
+                        <option value="1977">1977</option>
+                        <option value="1971">1971</option>
+                        <option value="1967">1967</option>
+                        <option value="1955">1955</option>
+                        <option value="1953">1953</option>
+                        <option value="1952">1952</option>
+                        <option value="1949">1949</option>
+                        <option value="1932">1932</option>
+                        <option value="1924">1924</option>
+                        <option value="1915">1915</option>
+                        <option value="1899">1899</option>
+                        <option value="1897">1897</option>
+                        <option value="1896">1896</option>
+                        <option value="1890">1890</option>
+                        <option value="1886">1886</option>
+                        <option value="1879">1879</option>
+                        <option value="1869">1869</option>
+                        <option value="1862">1862</option>
+                        <option value="1857">1857</option>
+                        <option value="1851">1851</option>
+                        <option value="1855">1855</option>
+                        <option value="1849">1849</option>
+                        <option value="1818">1818</option>
+                        <option value="1813">1813</option>
+                        <option value="1619">1619</option>
+                        <option value="1613">1613</option>
+                        <option value="1605">1605</option>
+                        <option value="1321">1321</option>
+                    </select>
+                </div>
+                <div class="three columns">
+                    <label for="autor">Autor</label>
+                    <select class="u-full-width" id="autor">
+                        <option value="">Seleccione</option>
+                        <option value="Miguel de Cervantes">Miguel de Cervantes</option>
+                        <option value="Jane Austen">Jane Austen</option>
+                        <option value="Mary Shelley">Mary Shelley</option>
+                        <option value="Víctor Hugo">Víctor Hugo</option>
+                        <option value="Herman Melville">Herman Melville</option>
+                        <option value="Gabriel García Márquez">Gabriel García Márquez</option>
+                        <option value="J.R.R. Tolkien">J.R.R. Tolkien</option>
+                        <option value="George Orwell">George Orwell</option>
+                        <option value="Aldous Huxley">Aldous Huxley</option>
+                        <option value="Ray Bradbury">Ray Bradbury</option>
+                        <option value="Dante Alighieri">Dante Alighieri</option>
+                        <option value="Charles Baudelaire">Charles Baudelaire</option>
+                        <option value="Walt Whitman">Walt Whitman</option>
+                        <option value="Isidore Ducasse">Isidore Ducasse</option>
+                        <option value="Pablo Neruda">Pablo Neruda</option>
+                        <option value="Edgar Allan Poe">Edgar Allan Poe</option>
+                        <option value="Joseph Conrad">Joseph Conrad</option>
+                        <option value="Franz Kafka">Franz Kafka</option>
+                        <option value="Ernest Hemingway">Ernest Hemingway</option>
+                        <option value="León Tolstói">León Tolstói</option>
+                        <option value="William Shakespeare">William Shakespeare</option>
+                        <option value="Lope de Vega">Lope de Vega</option>
+                        <option value="Henrik Ibsen">Henrik Ibsen</option>
+                        <option value="Anton Chejov">Anton Chejov</option>
+                        <option value="Bram Stoker">Bram Stoker</option>
+                        <option value="Oscar Wilde">Oscar Wilde</option>
+                        <option value="Stephen King">Stephen King</option>
+                        <option value="William Peter Blatty">William Peter Blatty</option>
+                        <option value="Stephen King">Stephen King</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="contenedor-resultado">
+            <h2>Resultados</h2>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    
+    <script src="./js/buscador.js"></script>
+    <script src="./js/db.js"></script>
+</body>
+</html>
