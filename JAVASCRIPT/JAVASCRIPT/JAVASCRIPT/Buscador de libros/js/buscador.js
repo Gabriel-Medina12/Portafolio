@@ -1,23 +1,25 @@
 //crear los selectores
-const tematica = document.querySelector('#tematica');
+const categoria = document.querySelector('#categoria');
 const titulo = document.querySelector('#titulo');
-const año = document.querySelector('#año');
+const isbn = document.querySelector('#isbn');
 const autor = document.querySelector('#autor');
+const edicion = document.querySelector('#edicion')
 
 //datos para la busqueda
 const datosBusqueda = {
-    tematica: '',
+    categoria: '',
     titulo: '',
-    años: '',
+    isbn: '',
     autor: '',
+    edicion:''
 }
 
 document.addEventListener('DOMContentLoaded', () =>{
     mostrarLibros(libros);
 })
 
-tematica.addEventListener('input', e =>{
-    datosBusqueda.tematica = e.target.value;
+categoria.addEventListener('input', e =>{
+    datosBusqueda.categoria = e.target.value;
     filtrarLibro()
 })
 
@@ -26,13 +28,17 @@ titulo.addEventListener('input', e =>{
     filtrarLibro()
 })
 
-año.addEventListener('input', e =>{
-    datosBusqueda.año = Number(e.target.value);
+isbn.addEventListener('input', e =>{
+    datosBusqueda.isbn = Number(e.target.value);
     filtrarLibro()
 })
 
 autor.addEventListener('input', e =>{
     datosBusqueda.autor = e.target.value;
+    filtrarLibro()
+})
+edicion.addEventListener('input', e =>{
+    datosBusqueda.edicion = e.target.value;
     filtrarLibro()
 })
 
@@ -43,7 +49,7 @@ function mostrarLibros(libros){
     libros.forEach(libro => {
         const libroHTML = document.createElement('p');
         libroHTML.innerHTML = `
-        <p>${libro.tematica} - ${libro.titulo} - ${libro.año} - ${libro.autor}</p>
+        <p>${libro.categoria} - ${libro.titulo} - ISBN: ${libro.isbn} - ${libro.autor} - Edicion: ${libro.edicion}</p>
         `;
         contenedor.appendChild(libroHTML);
     });
@@ -57,7 +63,7 @@ function limpiarHTML(){
 }
 
 function filtrarLibro(){
-    const resultado = libros.filter(filtrarTematica).filter(filtrarTitulo).filter(filtrarAño).filter(filtrarAutor);
+    const resultado = libros.filter(filtrarCategoria).filter(filtrarTitulo).filter(filtrarIsbn).filter(filtrarAutor).filter(filtrarEdicion);
 
     if(resultado.length){
         mostrarLibros(resultado)
@@ -74,9 +80,9 @@ function noResultado(){
     document.querySelector('#resultado').appendChild(noResultado)
 }
 
-function filtrarTematica(libro){
-    if(datosBusqueda.tematica){
-        return libro.tematica === datosBusqueda.tematica
+function filtrarCategoria(libro){
+    if(datosBusqueda.categoria){
+        return libro.categoria === datosBusqueda.categoria
     }else{
         return libro;
     }
@@ -90,9 +96,9 @@ function filtrarTitulo(libro){
     }
 }
 
-function filtrarAño(libro){
-    if(datosBusqueda.año){
-        return libro.año === datosBusqueda.año
+function filtrarIsbn(libro){
+    if(datosBusqueda.isbn){
+        return libro.isbn === datosBusqueda.isbn
     }else{
         return libro;
     }
@@ -101,6 +107,14 @@ function filtrarAño(libro){
 function filtrarAutor(libro){
     if(datosBusqueda.autor){
         return libro.autor === datosBusqueda.autor
+    }else{
+        return libro;
+    }
+}
+
+function filtrarEdicion(libro){
+    if(datosBusqueda.edicion){
+        return libro.edicion === datosBusqueda.edicion
     }else{
         return libro;
     }

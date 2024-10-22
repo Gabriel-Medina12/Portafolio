@@ -1,176 +1,205 @@
 const libros = [
 	{
-		tematica: 'Literatura Universal',
+		categoria: 'Literatura Universal',
 		titulo: 'Don Quijote de la Mancha',
-		año: 1605,
+		isbn: 9788491051008,
 		autor: 'Miguel de Cervantes',
+		edicion: "Edicion del IV Centenario",
 	},
 	{
-		tematica: 'Literatura Universal',
+		categoria: 'Literatura Universal',
 		titulo: 'Orgullo y Prejuicio',
-		año: 1813,
+		isbn: 9780141439518,
 		autor: 'Jane Austen',
+		edicion: "Penguin Classics"
 	},
 	{
-		tematica: 'Literatura Universal',
+		categoria: 'Literatura Universal',
 		titulo: 'Frankenstein o el moderno Prometeo',
-		año: 1818,
+		isbn: 9780141439471,
 		autor: 'Mary Shelley',
+		edicion: "Penguin Classics"
 	},
 	{
-		tematica: 'Literatura Universal',
+		categoria: 'Literatura Universal',
 		titulo: 'Los Miserables',
-		año: 1862,
+		isbn: 9780140444308,
 		autor: 'Víctor Hugo',
+		edicion: "Penguin Classics"
 	},
 	{
-		tematica: 'Literatura Universal',
+		categoria: 'Literatura Universal',
 		titulo: 'Moby Dick',
-		año: 1851,
+		isbn: 9780142437247,
 		autor: 'Herman Melville',
+		edicion: "Penguin Classics"
 	},
 	{
-		tematica: 'Ficción',
+		categoria: 'Ficción',
 		titulo: 'Cien años de soledad',
-		año: 1967,
+		isbn: 9780307474728,
 		autor: 'Gabriel García Márquez',
+		edicion: "Vintage Español"
 	},
 	{
-		tematica: 'Ficción',
+		categoria: 'Ficción',
 		titulo: 'El señor de los anillos',
-		año: 1955,
+		isbn: 9780544003415,
 		autor: 'J.R.R. Tolkien',
+		edicion: "50th Anniversary One-Volume Edition"
 	},
 	{
-		tematica: 'Ficción',
-		titulo: '1984',
-		año: 1949,
+		categoria: 'Ficción',
+		titulo: '84',
+		isbn: 9780451524935,
 		autor: 'George Orwell',
+		edicion: "Signet Classic"
 	},
 	{
-		tematica: 'Ficción',
+		categoria: 'Ficción',
 		titulo: 'Un mundo feliz',
-		año: 1932,
+		isbn: 9780060850524,
 		autor: 'Aldous Huxley',
+		edicion: "Harper Perennial Modern Classics"
 	},
 	{
-		tematica: 'Ficción',
-		titulo: 'Fahrenheit 451',
-		año: 1953,
+		categoria: 'Ficción',
+		titulo: 'Fahrenheit ',
+		isbn: 9781451673319,
 		autor: 'Ray Bradbury',
+		edicion: "Simon & Schuster"
 	},
 	{
-		tematica: 'Poesía',
+		categoria: 'Poesía',
 		titulo: 'La Divina Comedia',
-		año: 1321,
-		autor: 'Dante Alighieri',
+		isbn:9780142437223,
+		edicion: "Penguin Classics",
+		autor: 'Dante Alighieri'
 	},
 	{
-		tematica: 'Poesía',
+		categoria: 'Poesía',
 		titulo: 'Las flores del mal',
-		año: 1857,
+		isbn:9780199535583,
 		autor: 'Charles Baudelaire',
+		edicion: "Oxford World's Classics"
 	},
 	{
-		tematica: 'Poesía',
+		categoria: 'Poesía',
 		titulo: 'Hojas de hierba',
-		año: 1855,
+		isbn:9780140421996,
 		autor: 'Walt Whitman',
+		edicion: "Penguin Classics",
 	},
 	{
-		tematica: 'Poesía',
+		categoria: 'Poesía',
 		titulo: 'Cantos de Maldoror',
-		año: 1869,
+		isbn:9780811200820,
 		autor: 'Isidore Ducasse',
+		edicion: "New Directions"
 	},
 	{
-		tematica: 'Poesía',
+		categoria: 'Poesía',
 		titulo: 'Poemas de amor y de guerra',
-		año: 1924,
+		isbn:9780811217293,
 		autor: 'Pablo Neruda',
+		edicion: "New Directions"
 	},
 	{
-		tematica: 'Narrativa Corta',
+		categoria: 'Narrativa Corta',
 		titulo: 'Cuentos completos',
-		año: 1849,
+		isbn:9788491052166,
 		autor: 'Edgar Allan Poe',
+		edicion: "Páginas de Espuma"
 	},
 	{
-		tematica: 'Narrativa Corta',
+		categoria: 'Narrativa Corta',
 		titulo: 'El corazón de las tinieblas',
-		año: 1899,
+		isbn:9780141441672,
 		autor: 'Joseph Conrad',
+		edicion: "Penguin Classics",
 	},
 	{
-		tematica: 'Narrativa Corta',
+		categoria: 'Narrativa Corta',
 		titulo: 'La metamorfosis',
-		año: 1915,
+		isbn:9780393923209,
 		autor: 'Franz Kafka',
+		edicion: "Norton Critical Editions"
 	},
 	{
-		tematica: 'Narrativa Corta',
+		categoria: 'Narrativa Corta',
 		titulo: 'El viejo y el mar',
-		año: 1952,
+		isbn:9780684801223,
 		autor: 'Ernest Hemingway',
+		edicion: "Scribner"
 	},
 	{
-		tematica: 'Narrativa Corta',
+		categoria: 'Narrativa Corta',
 		titulo: 'La muerte de Iván Ilich',
-		año: 1886,
+		isbn:9780140449617,
 		autor: 'León Tolstói',
+		edicion: "Penguin Classics",
 	},
 	{
-		tematica: 'Drama',
+		categoria: 'Drama',
 		titulo: 'Hamlet',
-		año: 1613,
+		isbn:9780743477123,
 		autor: 'William Shakespeare',
+		edicion: "Simon & Schuster"
 	},
 	{
-		tematica: 'Drama',
+		categoria: 'Drama',
 		titulo: 'Fuenteovejuna',
-		año: 1619,
+		isbn:9788437601786,
 		autor: 'Lope de Vega',
+		edicion: "Cátedra"
 	},
 	{
-		tematica: 'Drama',
+		categoria: 'Drama',
 		titulo: 'Casa de muñecas',
-		año: 1879,
+		isbn:9780486270623,
 		autor: 'Henrik Ibsen',
+		edicion: "Dover Thrift Editions"
 	},
 	{
-		tematica: 'Drama',
+		categoria: 'Drama',
 		titulo: 'La gaviota',
-		año: 1896,
+		isbn:9780393338171,
 		autor: 'Anton Chejov',
+		edicion: "W. W. Norton & Company"
 	},
 	{
-		tematica: 'Terror',
+		categoria: 'Terror',
 		titulo: 'Drácula',
-		año: 1897,
+		isbn:9780141439846,
 		autor: 'Bram Stoker',
+		edicion: "Penguin Classics",
 	},
 	{
-		tematica: 'Terror',
+		categoria: 'Terror',
 		titulo: 'El retrato de Dorian Gray',
-		año: 1890,
+		isbn:9780141439570,
 		autor: 'Oscar Wilde',
+		edicion: "Penguin Classics",
 	},
 	{
-		tematica: 'Terror',
+		categoria: 'Terror',
 		titulo: 'El resplandor',
-		año: 1977,
+		isbn:9780307743657,
 		autor: 'Stephen King',
+		edicion: "Anchor"
 	},
 	{
-		tematica: 'Terror',
+		categoria: 'Terror',
 		titulo: 'El exorcista',
-		año: 1971,
+		isbn:9780062094360,
 		autor: 'William Peter Blatty',
+		edicion: "Harper"
 	},
 	{
-		tematica: 'Terror',
+		categoria: 'Terror',
 		titulo: 'It',
-		año: 1986,
+		isbn:9781501182099,
 		autor: 'Stephen King',
+		edicion: "Scribner"
 	}
 ];
