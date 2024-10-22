@@ -1,0 +1,15 @@
+:root{
+    --font-family: "Jaro", sans-serif;
+    --color-principal: #D2392F;
+    --color-secundario: #F2D027;
+    --white: #fff;
+}
+body{
+    font-family: var(--font-family);
+}
+nav{
+    background-color: var(--color-principal);
+}
+.pedidos{
+    color: var(--color-principal);
+}
