@@ -10,6 +10,62 @@ body{
 nav{
     background-color: var(--color-principal);
 }
+img{
+    max-width: 100%;
+}
 .pedidos{
     color: var(--color-principal);
+}
+.delivery,.tienda{
+    color: var(--white);
+    background-color: var(--color-secundario);
+}
+.delivery:hover, .tienda:hover{
+    background-color: var(--color-principal);
+}
+.deliver{
+    color: var(--color-secundario);
+}
+.Oparaf{
+    color: var(--color-principal);
+}
+footer{
+    background: var(--color-principal);
+}
+.griD{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 2rem 4rem 2rem 4rem;
+}
+.imagen1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.imagen2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.imagen3{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.griD-delivery{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin: 2rem 2rem 2rem 2rem;
+}
+.delivery1{
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+.delivery2{
+grid-column: 1/2;
+grid-row: 1/4;
+}
+form{
+    -webkit-box-shadow: 0px -1px 33px -2px rgba(0,0,0,0.78);
+-moz-box-shadow: 0px -1px 33px -2px rgba(0,0,0,0.78);
+box-shadow: 0px -1px 33px -2px rgba(0,0,0,0.78);
 }

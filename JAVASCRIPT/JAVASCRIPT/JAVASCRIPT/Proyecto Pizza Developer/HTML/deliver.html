@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Developer / Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jaro:opsz@6..72&display=swap');
+    </style>
+    <link rel="icon" href="../IMG/pizza_food_fast_food_italian_food_icon_208020.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="text-white p-4">
+            <div>
+                <a href="Index.html" class="text-5xl font-extrabold px-4 flex justify-center">
+                    Pizza Developer
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="flex items-center justify-center">
+            <h3 class="text-4xl deliver text-center mt-5 mb-5 uppercase cursor-pointer">Delivery</h3>
+            <img src="../IMG/motorbike_icon_187896.svg" class="w-15 h-10 ml-3">
+        </section>
+        <div class="griD-delivery">
+            <div class="imagen1 cursor-pointer size-96 ml-20 delivery2">
+                <img src="../IMG/_ujG7MOoQleblCZGscRpjw.jpg" >
+            </div>
+            <form class="delivery1 bg-red-600 text-center flex flex-col justify-center rounded-lg">
+                <div class="mb-4">
+                    <h3 class="text-3xl text-white mb-1">Tamaño</h3>
+                    <select name="pizza" id="pizza" class="bg-yellow-600 text-white p-1 rounded-full">
+                        <option >Seleccione</option>
+                        <option value="pequeña">Pequeña</option>
+                        <option value="mediana">Mediana</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-3xl text-white mb-2">Tipo</h3>
+                    <div>
+                        <label for="" class="text-xl text-white mb-1 mr-4">Sencilla
+                            <input type="radio" name="tipo" value="conExtras">  
+                        </label>
+                        <label for="" class="text-xl text-white mb-1 ml-4">Con ingredientes
+                            <input type="radio" name="tipo" value="conExtras">
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-3xl text-white mb-1">Ingredientes</h3>
+                    <div class="grid grid-cols-2 ">
+                        <div class="mb-1">
+                            <label for="" class="text-xl text-white">Champiñones</label>
+                            <input type="checkbox" class="ingredientes">
+                        </div>
+                        <div class="mb-1">
+                            <label for="" class="text-xl text-white">Jamón</label>
+                            <input type="checkbox" class="ingredientes">
+                        </div>
+                        <div class="mb-1">
+                            <label for="" class="text-xl text-white">Aceitunas</label>
+                            <input type="checkbox" class="ingredientes">
+                        </div>
+                        <div class="anchoas">
+                            <label for="" class="text-xl text-white">Anchoas</label>
+                            <input type="checkbox" class="ingredientes">
+                        </div>
+                        <div class="salchichon">
+                            <label for="" class="text-xl text-white">Salchichón</label>
+                            <input type="checkbox" class="ingredientes">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="boton" class="text-2xl text-white mb-1 bg-yellow-600 p-2 mx-14 rounded-full mb-2 uppercase">
+                    Calcular Costo
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer class="text-white mt-7">
+        <div class="flex justify-evenly p-4 uppercase">
+            <p>Contactanos</p>
+            <p>|</p>
+            <p>Sobre la Pizza</p>
+            <p>|</p>
+            <p>Terminos y condiciones</p>
+        </div>
+        <div class="mx-14 pb-5">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </footer>
+    <script src="../JS/deliver.js"></script>
+</body>
+</html>
