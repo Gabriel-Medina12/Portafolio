@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza developers</title>
+        <link rel="stylesheet" href="css/pizza.css">
+    </head>
+    <body>
+        <header>
+            <section class="titulo">
+                <h1>Pizza Developers</h1>
+            </section>
+            <div class="enlances">
+                <a href="#" class="home">Home</a>
+                <a href="#" class="about-us">About Us</a>
+                <a href="#" class="Services">Services</a>
+            </div>
+        </header>
+        <form action="">
+            <div>
+                <h3>Tamaño</h3>
+                <select name="pizza" id="pizza">
+                    <option value="">Seleccione</option>
+                    <option value="pequeña">Pequeña</option>
+                    <option value="mediana">Mediana</option>
+                    <option value="grande">Grande</option>
+                </select>
+            </div>
+            <div>
+                <h3>Tipo</h3>
+                <label for="">Sencilla
+                    <input type="radio" name="tipo" value="conExtras">  
+                </label>
+                <label for="">Con ingredientes
+                    <input type="radio" name="tipo" value="conExtras">
+                </label>
+            </div>
+            <div>
+                <h3>Ingredientes</h3>
+                <input type="checkbox" class="ingredientes">
+                <label for="">Champiñones</label>
+                <input type="checkbox" class="ingredientes">
+                <label for="">Jamón</label>
+                <input type="checkbox" class="ingredientes">
+                <label for="">Aceitunas</label>
+                <input type="checkbox" class="ingredientes">
+                <label for="">Anchoas</label>
+            </div>
+            <button type="submit" id="boton">Calcular Costo</button>
+        </form>
+        
+        <script src="js/script.js"></script>
+    </body>
+    </html>
+    <!--
+    <!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Pizza Developer</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body class="bg-gray-100 p-8">
+            <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                <div class="md:flex">
+                    <div class="p-8">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Pizza Developer</div>
+                        <h1 class="block mt-1 text-lg leading-tight font-medium text-black">Calcula el costo de tu pizza</h1>
+                        <form id="pizzaForm" class="mt-4">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="size">
+                                    Tamaño de la pizza:
+                                </label>
+                                <select id="size" name="size" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    <option value="pequeña">Pequeña (10cm)</option>
+                                    <option value="mediana">Mediana (14cm)</option>
+                                    <option value="grande">Grande (16cm)</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">
+                                    Ingredientes extras:
+                                </label>
+                                <div>
+                                    <input type="checkbox" id="champinones" name="extras" value="champinones">
+                                    <label for="champinones">Champiñones</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="jamon" name="extras" value="jamon">
+                                    <label for="jamon">Jamón</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="aceitunas" name="extras" value="aceitunas">
+                                    <label for="aceitunas">Aceitunas</label>
+                                </div>
+                                <div>
+                            <input type="checkbox" id="anchoas" name="extras" value="anchoas">
+                            <label for="anchoas">Anchoas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="salchichon" name="extras" value="salchichon">
+                            <label for="salchichon">Salchichón</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="laborCost">
+                            Costo de mano de obra ($):
+                        </label>
+                        <input type="number" id="laborCost" name="laborCost" min="0" step="0.01" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="extraCost">
+                            Costo de ingrediente extra para pizza pequeña ($):
+                        </label>
+                        <input type="number" id="extraCost" name="extraCost" min="0" step="0.01" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Calcular Costo
+                        </button>
+                    </div>
+                </form>
+                <div id="result" class="mt-4 text-lg font-bold text-green-600"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+-->
