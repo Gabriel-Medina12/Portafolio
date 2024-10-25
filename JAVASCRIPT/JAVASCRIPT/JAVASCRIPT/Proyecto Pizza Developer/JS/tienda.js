@@ -37,5 +37,6 @@ button.addEventListener('click', function(e){
     var tipo = document.getElementsByClassName('tipo');
 
     var costo_Total = costoTotal(pizza, tamañoPizza).toFixed(2)
-    alert(costo_Total);
+    var Costo__Total = "Costo total de $" + costo_Total
+    alert(Costo__Total);
 })
