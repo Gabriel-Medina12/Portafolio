@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Studio</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div id="login">
+                <h1>Login</h1>
+                <form action="" id="loginForm">
+                    <input type="text" id="emailLogin" placeholder="Email">
+                    <input type="password" id="passwordLogin" placeholder="Password">
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+            <div id="register">
+                <h1>Register</h1>
+                <form action="" id="registerForm">
+                    <input type="text" id="emailRegistro" placeholder="Email">
+                    <input type="password" id="passwordRegistro" placeholder="Password">
+                    <button type="submit">Registrarme</button>
+                </form>
+            </div>
+            <div class="register">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDbnIuXxL1riPX7_cvLcnk3AGHe6C_Y0yM",
+          authDomain: "marvelstudio-4f146.firebaseapp.com",
+          projectId: "marvelstudio-4f146",
+          storageBucket: "marvelstudio-4f146.firebasestorage.app",
+          messagingSenderId: "224193863775",
+          appId: "1:224193863775:web:bc5243592eb676fc86fbea",
+          measurementId: "G-VBPL3SY50T"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+      <script src="./JS/app.js"></script>
+</body>
+</html>
