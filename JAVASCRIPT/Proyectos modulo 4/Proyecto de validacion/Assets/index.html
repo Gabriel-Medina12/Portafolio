@@ -10,51 +10,75 @@
     <div class="container">
         <nav class="navbar">
             <div class="nav-items">
-                <a href="" class="nav-button">Enlace</a>
+                <a href="#header" class="nav-button">Header</a>
             </div>
             <div class="nav-items">
-                <a href="" class="nav-button">Enlace</a>
+                <a href="#informacion" class="nav-button">Informacion</a>
             </div>
             <div class="nav-items">
-                <a href="" class="nav-button">Enlace</a>
+                <a href="#main-form" class="nav-button">Formulario</a>
             </div>
             <div class="nav-items">
-                <a href="" class="nav-button">Enlace</a>
+                <a href="#footer" class="nav-button">Footer</a>
             </div>
-            <div class="nav-items">
-                <a href="" class="nav-button">Enlace</a>
-            </div>
+
         </nav>
-        <header class="header">
-            <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D" alt="" class="background">
-            <img src="https://www.soycaribepremium.es/wp-content/uploads/2024/05/Carlos-Vives-NataliaGw-2024.jpg" alt="" class="foto-perfil">
+        <header class="header" id="header">
+            <img src="https://iesnavarrovilloslada.educacion.navarra.es/web/adn/wp-content/uploads/sites/4/2024/05/saiko.jpg" alt="" class="background">
+            <img src="https://i.pinimg.com/736x/17/52/01/175201e59c4319b4ccf364446877779f.jpg" alt="" class="foto-perfil" id="foto-perfil">
             <h3 class="nombre-usuario">
-                Carlos Vives
+                Saiko
             </h3>
-            <audio src="./AUDIO/Saiko - COSAS QUE NO TE DIJE (Official Video).m4a" controls class="cancion">
+            <audio src="./AUDIO/Saiko - COSAS QUE NO TE DIJE (Official Video).m4a" id="cancion"  class="cancion">
 
             </audio>
             <p class="descripcion">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus in, vero voluptas consectetur laudantium reprehenderit eos praesentium earum unde, cumque blanditiis labore et rem quia, corporis nulla sunt ea dolorum minus sed sequi totam commodi. Voluptates vel aut illo praesentium exercitationem asperiores placeat. Iste neque voluptatum, ipsa, consectetur doloremque soluta non, pariatur tempora magnam veniam at? Vel voluptatum id blanditiis nobis est fugit facere ratione, cumque accusantium vitae. Totam aliquid consequuntur et voluptatem nesciunt perferendis.
+                Miguel Cantos Gómez (Armilla, Granada, 25 de mayo de 2002), conocido artísticamente como Saiko, es un cantante y compositor español de los géneros reguetón, pop y trap. En 2020 comenzó su carrera en solitario. Su primer sencillo se lanzó bajo el nombre «Te quiero fuera». Fue el año en el que empezó a trabajar con su actual manager "La mano de oro", que le ayudó a progresar como artista. No fue hasta el lanzamiento de «Polaris» en 2022 cuando el artista granadino llegó a la fama, pese a que previamente ya había colaborado con artistas como Lola Índigo y Alejo en «Humedad remix» o con Quevedo en «Jordan I» o en «Turbulencias», este último junto a otros artistas como Juseph, Fabio Colloricchio o La Pantera, y con Kabasaki como productor. «Polaris» fue todo un éxito, convirtiéndose en disco de oro.
             </p>
         </header>
-        <main class="informacion">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tQ0yjYUFKAE?si=w3kvGVCWpfDiJmr9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <main class="informacion" >
+            <iframe id="informacion"width="560" height="315" src="https://www.youtube.com/embed/8obld3JrBNM?si=6Y3F6pr0wVPC0-ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video src="./VIDEO/Saiko - COSAS QUE NO TE DIJE (Official Video) - Saiko (720p, h264, youtube).mp4" id="video"></video>
         </main>
-        <footer class="footer">
+        <main class="main-form" id="main-form">
+            <div>
+                <form action="">
+                    <div class="formulario-1">
+                        <h3>
+                            Formulario
+                        </h3>
+                        <div class="form">
+                            <label for="nombres">Nombre y Apellido</label>
+                            <input type="text" id="nombres" placeholder="Ingrese su nombre y apellido">
+                            <label for="email-1">Correo</label>
+                            <input type="email" placeholder="Ingrese su correo" id="email-1">
+                            <label for="tel">Telefono</label>
+                            <input type="number" placeholder="Ingrese su numero" id="tel">
+                            <label for="cedula">Cedula</label>
+                            <input type="number" placeholder="Ingrese su cedula" id="cedula">
+                            <button type="submit" id="enviar-1">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="footer" id="footer">
+            
             <div class="footer-section">
                 <h3>Contacto</h3>
-                <a href="0412">+580412</a>
+                <a href="0412">+58 0412-2911866</a>
                 <a href="correo">correo@gmail.com</a>
             </div>
-            <div class="footer-section">
+            <div class="footer-sectio2">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15692.151080135805!2d-66.85399729703592!3d10.497688784020776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a59b1f75ae1e5%3A0x124565c970e18c0a!2sParque%20Cristal%2C%20Avenida%20Francisco%20de%20Miranda%2C%20Caracas%201060%2C%20Miranda!5e0!3m2!1ses-419!2sve!4v1730285717840!5m2!1ses-419!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="footer-section">
-                <input type="email" placeholder="Escribe tu correo">
-                <textarea name="" id="" placeholder="Escribe tu mensaje"></textarea>
-                <button>Enviar</button>
-            </div>
+            <form action="">
+                <div class="footer-section3">
+                    <input type="email" placeholder="Escribe tu correo" id="email-2">
+                    <textarea name="" placeholder="Escribe tu mensaje" id="mensaje-2"></textarea>
+                    <button type="submit" id="enviar-2">Enviar</button>
+                </div>
+            </form>
         </footer>
     </div>
     <script src="../Assets/JS/app.js"> </script>
