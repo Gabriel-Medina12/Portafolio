@@ -33,8 +33,8 @@ getData('https://gateway.marvel.com/v1/public/characters')
 //barra de navegacion: personajes, comics, creadores, eventos, series, historias
 //
 
-const buttonComics = document.getElementById('bbp')
-button.onclick = getData('https://gateway.marvel.com/v1/public/comics')
+// const buttonComics = document.getElementById('bbp')
+// button.onclick = getData('https://gateway.marvel.com/v1/public/comics')
 
-const buttonSeries = document.getElementById('bbc')
-button.onclick = getData('https://gateway.marvel.com/v1/public/series')
+// const buttonSeries = document.getElementById('bbc')
+// button.onclick = getData('https://gateway.marvel.com/v1/public/series')
