@@ -72,10 +72,18 @@ onAuthStateChanged(auth, (user)=>{
     if (user){
         new Notification("Bienvenido a Marvel")
         document.getElementById('auth').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
+        document.getElementById('navBar').style.display = 'flex';
+        document.getElementById('personajes').style.display = 'grid'
+        document.getElementById('btn').style.display = 'flex'
+        document.getElementById('background-login').style.display = 'none'
+        document.getElementById('background-enter').style.display = 'block'
     } else{
         new Notification("Inicia sesion para no perderte de nada")
         document.getElementById('auth').style.display = 'block';
-        document.getElementById('content').style.display = 'none';
+        document.getElementById('navBar').style.display = 'none';
+        document.getElementById('personajes').style.display = 'none'
+        document.getElementById('btn').style.display = 'none'
+        document.getElementById('background-login').style.display = 'block'
+        document.getElementById('background-enter').style.display = 'none'
     }
 })

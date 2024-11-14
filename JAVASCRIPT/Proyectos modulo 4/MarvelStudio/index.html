@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Studio</title>
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="shortcut icon" href="./IMG/Marvel_icon-icons.com_61667.png" type="image/x-icon">
 </head>
 <body>
     <div class="container" id="auth">
@@ -27,16 +28,48 @@
             </div>
         </div>
     </div>
-    <div class="LogOut" id="content">
-        <button id="cerrarSesion">Cerrar Sesion</button>
+    <img src="./IMG/1wrPpeD_SieKAsr784dTdQ.webp" class="background-login" id="background-login">
+    <nav class="navBar" id="navBar">
+        <div class="info">
+            <div class="Personaje">
+                <button class="character" id="character">Personajes</button>
+            </div>
+            <div class="Comics">
+                <button class="comics" id="comics">Comics</button>
+            </div>
+            <div class="Creadores">
+                <button class="creadores" id="creadores">Creadores</button>
+            </div>
+            <div class="Eventos">
+                <button class="eventos" id="eventos">Eventos</button>
+            </div>
+            <div class="Series">
+                <button class="series" id="series">Series</button>
+            </div>
+            <div class="Historias">
+                <button class="historias" id="historias">Historias</button>
+            </div>
+        </div>
+        <div class="LogOut" id="content">
+            <button id="cerrarSesion" class="cerrar">Cerrar Sesion</button>
+        </div>
+    </nav>
+    <div class="personajes" id="personajes">
     </div>
 
+    <div class="nav-container" id="btn">
+        <button id="back">
+            back
+        </button>
+        <p id="paginas"></p>
+        <button id="next">
+            next
+        </button>
+    </div>
+    <div class="background-enter" id="background-enter"></div>
 
 
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js"></script>
     <script src="./JS/auth.js" type="module"></script>
     <script src="./JS/app2.js"></script>
 </body>

@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jaro:opsz@6..72&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: "Bangers", system-ui;;
 }
-
 body{
-    background-image: url(https://wallpapercave.com/wp/wp9426777.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
+}
+.background-login{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+.background-enter{
+    background-image: url(../IMG/Rl6YyJHLS3G0fPIkDV21Yw.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
     width: 35vw;
@@ -20,11 +27,14 @@ body{
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: absolute;
 }
 h1{
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin: 1rem;
+    text-shadow: 0 0 20px #000;
 }
 form{
     display: flex;
@@ -41,17 +51,74 @@ button{
     padding: 10px;
     border: none;
     border-radius: 30px;
-    background-color: #09aae6;
+    background-color: #e66109;
     color: #fff;
     cursor: pointer;
 }
-#content{
-    display: none;
+button:hover{
+    box-shadow: 0 0 10px #e6a009;
+    font-size: 15px;
 }
-.LogOut{
-    backdrop-filter: blur(2px);
-    background-color: rgba(255,255,255,0.2);
+.navBar{
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    padding: .75rem;
+    backdrop-filter: blur(6px);
+    background-color: #e6ab096c;
     padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.personajes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
+    padding: 40px 11%;
+    margin-top: 5rem;
+    z-index: 2;
+}
+.card-item{
+    text-align: center;
+    border-radius: 25px;
+    background-color: #555555ad;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.card-item *{
+    max-width: 100%;
+}
+.card-item:hover{
+    background-color: #666;
+    transform: translateY(-20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.card-item img{
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 1rem;
+}
+.card-item h2{
+    font-size: 24px;
+    margin-bottom: .5rem;
+    color: aliceblue;
+}
+.card-item p{
+    margin-bottom: .5rem;
+    color: azure;
+}
+.info{
+    display: flex;
+    gap: 5rem;
+}
+.nav-container{
+    position: fixed;
+    bottom: 1rem;
+    gap: 1rem;
+    text-transform: uppercase;
+    z-index: 5;
 }
