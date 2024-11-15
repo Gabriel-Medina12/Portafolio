@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+canvas {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+}
+.ml-auto{
+    margin-left: auto;
+}
