@@ -73,17 +73,25 @@ onAuthStateChanged(auth, (user)=>{
         new Notification("Bienvenido a Marvel")
         document.getElementById('auth').style.display = 'none';
         document.getElementById('navBar').style.display = 'flex';
-        document.getElementById('personajes').style.display = 'grid'
+        document.getElementById('content-infoApi').style.display = 'block'
         document.getElementById('btn').style.display = 'flex'
-        document.getElementById('background-login').style.display = 'none'
-        document.getElementById('background-enter').style.display = 'block'
+        document.getElementById('header').style.display = 'block'
     } else{
         new Notification("Inicia sesion para no perderte de nada")
-        document.getElementById('auth').style.display = 'block';
+        document.getElementById('auth').style.display = 'flex';
         document.getElementById('navBar').style.display = 'none';
-        document.getElementById('personajes').style.display = 'none'
+        document.getElementById('content-infoApi').style.display = 'none'
         document.getElementById('btn').style.display = 'none'
-        document.getElementById('background-login').style.display = 'block'
-        document.getElementById('background-enter').style.display = 'none'
+        document.getElementById('header').style.display = 'none'
     }
+})
+const container = document.querySelector('.container');
+const btnSignIn = document.getElementById('btn-sign-in');
+const btnSignUp = document.getElementById('btn-sign-up');
+
+btnSignIn.addEventListener('click', ()=>{
+    container.classList.remove('toggle');
+})
+btnSignUp.addEventListener('click', ()=>{
+    container.classList.add('toggle');
 })

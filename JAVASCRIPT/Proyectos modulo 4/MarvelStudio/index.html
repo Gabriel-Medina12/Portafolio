@@ -8,83 +8,130 @@
     <link rel="shortcut icon" href="./IMG/Marvel_icon-icons.com_61667.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container" id="auth">
-        <div class="card">
-            <div id="login">
-                <h1>Login</h1>
-                <form action="" id="loginForm">
-                    <input type="text" id="emailLogin" placeholder="Email" name="emailLogin">
-                    <input type="password" id="passwordLogin" placeholder="Password" name="passwordLogin">
-                    <button type="submit">Iniciar Sesión</button>
+    <main class="container-auth">
+        <div class="container" id="auth">
+            <div class="containerForm">
+                <form action="" id="loginForm" class="sign-in">
+                    <h2>Iniciar Sesion</h2>
+                    <div class="social-networks">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <span>Use su correo y contraseña</span>
+                    <div class="container-input">
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="text" id="emailLogin" placeholder="Email" name="emailLogin">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock"></ion-icon>
+                        <input type="password" id="passwordLogin" placeholder="Password" name="passwordLogin">
+                    </div>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                    <button type="submit" class="button">Iniciar Sesión</button>
                 </form>
             </div>
-            <div id="register">
-                <h1>Register</h1>
-                <form action="" id="registerForm">
-                    <input type="text" id="emailRegistro" placeholder="Email" name="emailRegistro">
-                    <input type="password" id="passwordRegistro" placeholder="Password" name="passwordRegistro">
-                    <button type="submit">Registrarme</button>
+            <div class="containerForm">
+                <form action="" id="registerForm" class="sign-up">
+                    <h2>Registrate</h2>
+                    <div class="social-networks">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <span>Use su correo electrónico para registarse</span>
+                    <div class="container-input">
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="text" id="emailRegistro" placeholder="Email" name="emailRegistro">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock"></ion-icon>
+                        <input type="password" id="passwordRegistro" placeholder="Password" name="passwordRegistro">
+                    </div>
+    
+                    <button type="submit" class="button">Registrarse</button>
                 </form>
             </div>
-        </div>
-    </div>
-    <img src="./IMG/1wrPpeD_SieKAsr784dTdQ.webp" class="background-login" id="background-login">
-    <nav class="navBar" id="navBar">
-        <div class="info">
-            <div class="Personaje">
-                <button class="character" id="character">Personajes</button>
-            </div>
-            <div class="Comics">
-                <button class="comics" id="comics">Comics</button>
-            </div>
-            <div class="Creadores">
-                <button class="creadores" id="creadores">Creadores</button>
-            </div>
-            <div class="Eventos">
-                <button class="eventos" id="eventos">Eventos</button>
-            </div>
-            <div class="Series">
-                <button class="series" id="series">Series</button>
-            </div>
-            <div class="Historias">
-                <button class="historias" id="historias">Historias</button>
+            <div class="container-welcome">
+                <div class="welcome-sign-up welcome">
+                    <h3>¡Bienvenido!</h3>
+                    <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                    <button class="button" id="btn-sign-up">Registrarse</button>
+                </div>
+                <div class="welcome-sign-in welcome">
+                    <h3>¡Hola!</h3>
+                    <p>Registrese con sus datos personales para usar todas las funciones del sitio</p>
+                    <button class="button" id="btn-sign-in">Iniciar Sesion</button>
+                </div>
             </div>
         </div>
-        <div class="LogOut" id="content">
-            <button id="cerrarSesion" class="cerrar">Cerrar Sesion</button>
-        </div>
-    </nav>
-    <div class="personajes" id="personajes">
+    </main>
+    <header class="header" id="header"> 
+        <a href="#" class="marvel">Marvel</a>
+        <button class="abrir-menu" id="abrir-menu"><ion-icon name="menu"></ion-icon></button>
+        <nav class="navBar" id="navBar">
+                <div class="info">
+                    <button class="cerrar-menu" id="cerrar-menu"><ion-icon name="close"></ion-icon></button>
+                    <div class="Personaje">
+                        <button class="character" id="character">Personajes</button>
+                    </div>
+                    <div class="Comics">
+                        <button class="comics" id="comics">Comics</button>
+                    </div>
+                    <div class="Creadores">
+                        <button class="creadores" id="creadores">Creadores</button>
+                    </div>
+                    <div class="Eventos">
+                        <button class="eventos" id="eventos">Eventos</button>
+                    </div>
+                    <div class="Series">
+                        <button class="series" id="series">Series</button>
+                    </div>
+                    <div class="Historias">
+                        <button class="historias" id="historias">Historias</button>
+                    </div>
+                    <div class="LogOut" id="content">
+                        <button id="cerrarSesion" class="cerrar">Cerrar Sesion</button>
+                    </div>
+                </div>
+            </nav>
+    </header>
 
-    </div>
-    <div class="comic" id="comic">
-
-    </div>
-    <div class="creador" id="creador">
-
-    </div>
-    <div class="evento" id="evento">
-
-    </div>
-    <div class="serie" id="serie">
-
-    </div>
-    <div class="historia" id="historia">
+    <main class="content-infoApi" id="content-infoApi">
+        <div class="infoApi" id="infoApi">
+            <div class="personajes card" id="personajes">
         
-    </div>
-
-    <div class="nav-container" id="btn">
-        <button id="back">
+            </div>
+            <div class="comic card" id="comic">
+        
+            </div>
+            <div class="creador card" id="creador">
+        
+            </div>
+            <div class="evento card" id="evento">
+        
+            </div>
+            <div class="serie card" id="serie">
+        
+            </div>
+            <div class="historia card" id="historia">
+                
+            </div>
+        </div>
+    </main>
+    <div class="btn-back-next" id="btn">
+        <button id="back" class="button com ser eve cre sto">
             back
         </button>
         <p id="paginas"></p>
-        <button id="next">
+        <button id="next" class="button com ser eve cre sto">
             next
         </button>
     </div>
-    <div class="background-enter" id="background-enter"></div>
 
-
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js"></script>
     <script src="./JS/auth.js" type="module"></script>
     <script src="./JS/app2.js"></script>
