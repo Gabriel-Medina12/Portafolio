@@ -8,11 +8,18 @@
     <link rel="icon" href="./assets/img/rick_96214.png">
 </head>
 <body>
-    <nav class="navBar">
-        <a href="index.html">Personajes</a>
-        <a href="episodios.html">Episodidios</a>
-        <a href="location.html">Localizacion</a>
-    </nav>
+    <header>
+        <button class="abrir-menu" id="abrir-menu"><ion-icon name="menu"></ion-icon></button>
+        <nav class="navBar" id="navBar">
+            <div class="info">
+                <button class="cerrar-menu" id="cerrar-menu"><ion-icon name="close"></ion-icon></button>
+                <a href="index.html">Personajes</a>
+                <a href="episodios.html">Episodidios</a>
+                <a href="location.html">Localizacion</a>
+            </div>
+        </nav>
+
+    </header>
     <section class="titulo">
         <h1>Localizacion</h1>
     </section>
@@ -29,6 +36,9 @@
         </button>
     </footer>
 
+
+    <script src="./assets/js/styles.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="assets/js/location.js"></script>
 </body>
 </html>

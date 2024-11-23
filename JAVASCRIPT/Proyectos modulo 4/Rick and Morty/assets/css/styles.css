@@ -12,7 +12,16 @@ body{
     background-size:cover;
     background-position: center;
 }
-.navBar{
+.abrir-menu,.cerrar-menu{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+header {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -20,6 +29,11 @@ body{
     background-color: #281e41;
     border-radius: 0px 0px 24px 24px;
 }
+.info{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+} 
 .navBar a{
     text-decoration: none;
     text-transform: uppercase;
@@ -102,4 +116,37 @@ button:hover{
 #paginas {
     color: #fff;
     font-size: 18px;
+}
+@media screen and (max-width:768px) {
+    header{
+        justify-content: space-between;
+    }
+    .abrir-menu, .cerrar-menu{
+        display: block;
+        font-size: 2rem;
+    }
+    .navBar{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        width: 100%;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        background-color: #1c1d20;
+        padding: 35px;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBar.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .info{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
 }
