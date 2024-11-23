@@ -3,17 +3,17 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight /2, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth /2, window.innerHeight );
 renderer.setPixelRatio(window.devicePixelRatio)
 renderer.setClearColor(0x000000, 0)
 renderer.setAnimationLoop( animate );
 document.body.appendChild( renderer.domElement );
 
 
-camera.position.z = 5;
+camera.position.z = 7.5;
 
 const light = new THREE.AmbientLight(0xffffff)
 scene.add(light)
@@ -51,6 +51,7 @@ controls.addEventListener(window);
 controls.target = new THREE.Vector3(0,0,0);
 controls.enableZoom = false;
 controls.enablePan = false;
+controls.autoRotate =true;
 
 
 window.addEventListener('resize', ()=>{
@@ -64,7 +65,7 @@ window.addEventListener('resize', ()=>{
 
 function animate() {
 
-
+    controls.update();
 	renderer.render( scene, camera );
 
 }
