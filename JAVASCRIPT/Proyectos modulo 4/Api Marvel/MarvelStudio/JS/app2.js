@@ -7,6 +7,8 @@ const UrlCreators = 'https://gateway.marvel.com/v1/public/creators';
 const UrlEvents = 'https://gateway.marvel.com/v1/public/events';
 const UrlSeries = 'https://gateway.marvel.com/v1/public/series';
 const UrlStories = 'https://gateway.marvel.com/v1/public/stories';
+const back = document.getElementById('back');
+const next = document.getElementById('next');
 
 const getData = async (url, offset = 0) => {
     const timestamp = Math.floor(Date.now() / 1000);
@@ -33,65 +35,145 @@ function addData(data){
 }
 const personajes = document.getElementById('character');
 personajes.addEventListener('click', ()=>{
-    getData(UrlPersonajes, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlPersonajes)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlPersonajes, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlPersonajes, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 const comics = document.getElementById('comics');
 comics.addEventListener('click', ()=>{
-    getData(UrlComics, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlComics)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlComics, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlComics, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 const creadores = document.getElementById('creadores');
 creadores.addEventListener('click', ()=>{
-    getData(UrlCreators, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlCreators)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlCreators, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlCreators, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 const eventos = document.getElementById('eventos');
 eventos.addEventListener('click', ()=>{
-    getData(UrlEvents, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlEvents)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlEvents, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlEvents, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 const series = document.getElementById('series');
 series.addEventListener('click', ()=>{
     
-    getData(UrlSeries, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlSeries)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlSeries, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlSeries, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 const historias = document.getElementById('historias');
 historias.addEventListener('click', ()=>{
     
-    getData(UrlStories, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    getData(UrlStories)
+    .then(data =>
+        addData(data.data.results))
+        back.addEventListener('click', ()=>{
+            if(offset > 0){
+                offset -=20;
+            }
+            getData(UrlStories, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        next.addEventListener('click', ()=>{
+            offset += 20;
+            getData(UrlStories, offset)
+            .then(data =>
+                addData(data.data.results))
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
 })
 
 
-const back = document.getElementById('back');
-const next = document.getElementById('next');
-back.addEventListener('click', ()=>{
-    if(offset > 0){
-        offset -=20;
-    }
-    getData(UrlPersonajes, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-})
-next.addEventListener('click', ()=>{
-    offset += 20;
-    getData(UrlPersonajes, offset)
-    .then(data =>addData(data.data.results))
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-})
 
 const nav = document.getElementById('navBar');
 const abrir = document.getElementById('abrir-menu');
