@@ -16,7 +16,10 @@
                 <a href="#informacion" class="nav-button">Informacion</a>
             </div>
             <div class="nav-items">
-                <a href="#main-form" class="nav-button">Formulario</a>
+                <a href="#albums" class="nav-button">Albums</a>
+            </div>
+            <div class="nav-items">
+                <a href="#form" class="nav-button">Formulario</a>
             </div>
             <div class="nav-items">
                 <a href="#footer" class="nav-button">Footer</a>
@@ -24,8 +27,8 @@
 
         </nav>
         <header class="header" id="header">
-            <img src="https://iesnavarrovilloslada.educacion.navarra.es/web/adn/wp-content/uploads/sites/4/2024/05/saiko.jpg" alt="" class="background">
-            <img src="https://i.pinimg.com/736x/17/52/01/175201e59c4319b4ccf364446877779f.jpg" alt="" class="foto-perfil" id="foto-perfil">
+            <img src="./Assets/IMG/saiko.jpg" alt="" class="background">
+            <img src="./Assets/IMG/fotoPerfilSaiko.jpg" alt="" class="foto-perfil" id="foto-perfil">
             <h3 class="nombre-usuario">
                 Saiko
             </h3>
@@ -36,17 +39,111 @@
                 Miguel Cantos Gómez (Armilla, Granada, 25 de mayo de 2002), conocido artísticamente como Saiko, es un cantante y compositor español de los géneros reguetón, pop y trap. En 2020 comenzó su carrera en solitario. Su primer sencillo se lanzó bajo el nombre «Te quiero fuera». Fue el año en el que empezó a trabajar con su actual manager "La mano de oro", que le ayudó a progresar como artista. No fue hasta el lanzamiento de «Polaris» en 2022 cuando el artista granadino llegó a la fama, pese a que previamente ya había colaborado con artistas como Lola Índigo y Alejo en «Humedad remix» o con Quevedo en «Jordan I» o en «Turbulencias», este último junto a otros artistas como Juseph, Fabio Colloricchio o La Pantera, y con Kabasaki como productor. «Polaris» fue todo un éxito, convirtiéndose en disco de oro.
             </p>
         </header>
-        <main class="informacion" >
-            <iframe id="informacion"width="560" height="315" src="https://www.youtube.com/embed/8obld3JrBNM?si=6Y3F6pr0wVPC0-ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <main class="informacion">
+            <h2 id="informacion">COSAS QUE NO TE DIJE</h2>
             <video src="./Assets/VIDEO/Saiko - COSAS QUE NO TE DIJE (Official Video) - Saiko (720p, h264, youtube).mp4" id="video"></video>
         </main>
         <main class="main-form" id="main-form">
+            <div class="Carrousel" id="albums">
+                <h2>Albums</h2>
+                <div id="slick-list" class="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev">
+                        <ion-icon name="arrow-back"></ion-icon>
+                    </button>
+                <div class="slick-track" id="track">
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>Juguete</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/4b911544b4c9233cb0c5799f7c5cd4f9.1000x1000x1.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>Sakura</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/500x500.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>COSAS QUE NO TE DIJE</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/CosasQueNoTeDije.png" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>X'clusivo</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/xCLUSIVO.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>Polaris Remix</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/PolarisRemix.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>Ódiame</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/Odiame.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>Antidepresivos</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/Antidepresivos.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slick">
+                        <div>
+                            <a href="#">
+                                <h4><small>SUPERNOVA</small>Watch</h4>
+                                <picture>
+                                    <img src="./Assets/IMG/Supernova.jpg" alt="Image">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slick-arrow slick-next" id="button-next">
+                    <ion-icon name="arrow-forward"></ion-icon>                
+                </button>
+                </div>
+            </div>
+            <hr/>
             <div>
-                <form action="">
+                <form action="" id="form">
                     <div class="formulario-1">
-                        <h3>
+                        <h2>
                             Formulario
-                        </h3>
+                        </h2>
                         <div class="form">
                             <label for="nombres">Nombre y Apellido</label>
                             <input type="text" id="nombres" placeholder="Ingrese su nombre y apellido">
@@ -81,6 +178,9 @@
             </form>
         </footer>
     </div>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="./Assets/JS/app.js"> </script>
 </body>
 </html>

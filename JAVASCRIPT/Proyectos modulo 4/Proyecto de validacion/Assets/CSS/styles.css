@@ -13,6 +13,16 @@
 p{
     line-height: 1.5rem;
 }
+h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #fff;
+}
 
 .navbar{
     width: 100vw;
@@ -109,9 +119,19 @@ p{
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 90vw;
-    background-image: url(https://pbs.twimg.com/media/GLIJdAHXYAI95lh.jpg:large);
+    height: 70vw;
+    background-image: url(../IMG/BANNER_01-scaled.jpg);
     background-size: cover;
+}
+.informacion h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #fff;
 }
 .formulario-1 h3{
     text-align: center;
@@ -122,8 +142,11 @@ p{
 }
 .main-form{
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,1) 55%, rgba(0,190,255,1) 100%);
+    background-image: url(../IMG/500x500.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2rem;
+    background-position: center;
 }
 .form{
     margin-left: 10rem;
@@ -171,22 +194,11 @@ p{
     backdrop-filter: blur(10px);
     margin-top: 2rem;
 }
-.informacion > iframe{
-    margin-top: 2rem;
-    width: 60vw;
-    height: 30vw;
-    border-radius: 24px;
-    padding: 2rem;
-    background-color: rgba(2, 0, 36, 0.5);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-}
 .footer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-color: #454545;
     width: 100vw;
     padding: 3rem;
 }
@@ -215,14 +227,119 @@ p{
     border-radius: 24px;
 }
 .footer-section3 > input, .footer-section3 > textarea, .footer-section3 > button{
-    width: 100%;
+    width: 70%;
     margin: 1rem;
+    margin-left: 5rem;
     padding: 0.75rem;
     border-radius: 24px;
     text-align: center;
+    
 }
 .footer-section3 button:hover{
     background-color: rgba(131,58,180,1);
     color: aliceblue;
     box-shadow: 1px 1px 40px rgba(131,58,180,1);
+}
+
+
+/*--------------------- Carrousel ------------------------*/
+h4, small,a{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.Carrousel{
+    width: 100%;
+}
+.Carrousel h2{
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #fff;
+}
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: #fff;
+    padding: 15px;
+}
+.slick h4 small{
+    font-size: 15px;
+    display: block;
+}
+.slick a img{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: .3 ease-in-out;
+}
+.slick a img:hover{
+    opacity: .85;
+    transform:scale(1.25);
+    border-radius: 8px;
+}
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow ion-icon{
+    width: 24px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.7);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+hr {
+    border-top: 2px solid #ccc; /* Adjust border color and thickness as needed */
+    margin: 20px 0; /* Adjust margin top and bottom as needed */
 }
