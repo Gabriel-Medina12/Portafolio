@@ -39,7 +39,7 @@ personajes.addEventListener('click', ()=>{
     .then(data =>
         addData(data.data.results))
         back.addEventListener('click', ()=>{
-            if(offset > 0){
+            if(offset > 20){
                 offset -=20;
             }
             getData(UrlPersonajes, offset)
