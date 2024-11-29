@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     setTimeout(()=>{
         loader.style.opacity = '0';
         // loader.style.display = 'none';
-    },1000);
+    },120);
 })

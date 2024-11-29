@@ -35,10 +35,6 @@ const server = http.createServer(function (request, response){
         const filePath = path.join(__dirname, `/views/assets/css/${request.url}`);
         readFiles(response, filePath, mimeType = "text/css");
     }
-    else if (request.url === '/javascript'){
-        const filePath = path.join(__dirname, '/views/assets/js/app.js');
-        readFiles(response, filePath, mimeType = "text/javascript");
-    }
     else if (request.url.match(/.(js)$/) ) {
         const filePath = path.join(__dirname, `/views/assets/js/${request.url}`);
         readFiles(response, filePath, mimeType = "text/javascript");
