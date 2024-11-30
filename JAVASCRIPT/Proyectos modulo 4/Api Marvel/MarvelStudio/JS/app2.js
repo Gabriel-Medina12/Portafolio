@@ -19,39 +19,51 @@ const getData = async (url, offset = 0) => {
     return data;
 }
 
-function addData(data){
+function addData(data, type){
     const dataContainer = document.getElementById('personajes');
     dataContainer.innerHTML = "";
+    if(type == 'character'){
 
-    data.forEach(item =>{
-        dataContainer.innerHTML +=`
-        <div class="card-item">
-            <img src="${item.thumbnail.path + "." + item.thumbnail.extension}">
-            <h2>${item.name || item.title || item.firstName || "No hay titutlo"}</h2>
-            <p>${item.description || item.variantDescription || "No hay descripción"}</p>
-        </div>
-        `
-    })
+        data.forEach(item =>{
+            dataContainer.innerHTML +=`
+            <div class="card-item">
+                <img src="${item.thumbnail.path + "." + item.thumbnail.extension}">
+                <h2>${item.name || item.title || item.firstName || "No hay titutlo"}</h2>
+                <p>${item.description || item.variantDescription || "No hay descripción"}</p>
+            </div>
+            `
+        })
+    }else if(type == 'comic'){
+        data.forEach(item =>{
+            dataContainer.innerHTML +=`
+            <div class="card-item">
+                <img src="${item.thumbnail.path + "." + item.thumbnail.extension}">
+                <h2>${item.name || item.title || item.firstName || "No hay titutlo"}</h2>
+                <p>${item.description || item.variantDescription || "No hay descripción"}</p>
+            </div>
+            `
+        })
+    }
 }
 const personajes = document.getElementById('character');
 personajes.addEventListener('click', ()=>{
     getData(UrlPersonajes)
     .then(data =>
-        addData(data.data.results))
+        addData(data.data.results, 'character'))
         back.addEventListener('click', ()=>{
             if(offset > 20){
                 offset -=20;
             }
             getData(UrlPersonajes, offset)
             .then(data =>
-                addData(data.data.results))
+                addData(data.data.results, 'character'))
                 window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         next.addEventListener('click', ()=>{
             offset += 20;
             getData(UrlPersonajes, offset)
             .then(data =>
-                addData(data.data.results))
+                addData(data.data.results, 'character'))
                 window.scrollTo({ top: 0, behavior: 'smooth' });
         })
 })
@@ -60,118 +72,118 @@ const comics = document.getElementById('comics');
 comics.addEventListener('click', ()=>{
     getData(UrlComics)
     .then(data =>
-        addData(data.data.results))
+        addData(data.data.results, 'comics'))
         back.addEventListener('click', ()=>{
             if(offset > 0){
                 offset -=20;
             }
             getData(UrlComics, offset)
             .then(data =>
-                addData(data.data.results))
+                addData(data.data.results, 'comics'))
                 window.scrollTo({ top: 0, behavior: 'smooth' });
         })
         next.addEventListener('click', ()=>{
             offset += 20;
             getData(UrlComics, offset)
             .then(data =>
-                addData(data.data.results))
+                addData(data.data.results, 'comics'))
                 window.scrollTo({ top: 0, behavior: 'smooth' });
         })
 })
 
-const creadores = document.getElementById('creadores');
-creadores.addEventListener('click', ()=>{
-    getData(UrlCreators)
-    .then(data =>
-        addData(data.data.results))
-        back.addEventListener('click', ()=>{
-            if(offset > 0){
-                offset -=20;
-            }
-            getData(UrlCreators, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-        next.addEventListener('click', ()=>{
-            offset += 20;
-            getData(UrlCreators, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-})
+// const creadores = document.getElementById('creadores');
+// creadores.addEventListener('click', ()=>{
+//     getData(UrlCreators)
+//     .then(data =>
+//         addData(data.data.results))
+//         back.addEventListener('click', ()=>{
+//             if(offset > 0){
+//                 offset -=20;
+//             }
+//             getData(UrlCreators, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+//         next.addEventListener('click', ()=>{
+//             offset += 20;
+//             getData(UrlCreators, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+// })
 
-const eventos = document.getElementById('eventos');
-eventos.addEventListener('click', ()=>{
-    getData(UrlEvents)
-    .then(data =>
-        addData(data.data.results))
-        back.addEventListener('click', ()=>{
-            if(offset > 0){
-                offset -=20;
-            }
-            getData(UrlEvents, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-        next.addEventListener('click', ()=>{
-            offset += 20;
-            getData(UrlEvents, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-})
+// const eventos = document.getElementById('eventos');
+// eventos.addEventListener('click', ()=>{
+//     getData(UrlEvents)
+//     .then(data =>
+//         addData(data.data.results))
+//         back.addEventListener('click', ()=>{
+//             if(offset > 0){
+//                 offset -=20;
+//             }
+//             getData(UrlEvents, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+//         next.addEventListener('click', ()=>{
+//             offset += 20;
+//             getData(UrlEvents, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+// })
 
-const series = document.getElementById('series');
-series.addEventListener('click', ()=>{
+// const series = document.getElementById('series');
+// series.addEventListener('click', ()=>{
     
-    getData(UrlSeries)
-    .then(data =>
-        addData(data.data.results))
-        back.addEventListener('click', ()=>{
-            if(offset > 0){
-                offset -=20;
-            }
-            getData(UrlSeries, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-        next.addEventListener('click', ()=>{
-            offset += 20;
-            getData(UrlSeries, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-})
+//     getData(UrlSeries)
+//     .then(data =>
+//         addData(data.data.results))
+//         back.addEventListener('click', ()=>{
+//             if(offset > 0){
+//                 offset -=20;
+//             }
+//             getData(UrlSeries, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+//         next.addEventListener('click', ()=>{
+//             offset += 20;
+//             getData(UrlSeries, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+// })
 
-const historias = document.getElementById('historias');
-historias.addEventListener('click', ()=>{
+// const historias = document.getElementById('historias');
+// historias.addEventListener('click', ()=>{
     
-    getData(UrlStories)
-    .then(data =>
-        addData(data.data.results))
-        back.addEventListener('click', ()=>{
-            if(offset > 0){
-                offset -=20;
-            }
-            getData(UrlStories, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-        next.addEventListener('click', ()=>{
-            offset += 20;
-            getData(UrlStories, offset)
-            .then(data =>
-                addData(data.data.results))
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-        })
-})
+//     getData(UrlStories)
+//     .then(data =>
+//         addData(data.data.results))
+//         back.addEventListener('click', ()=>{
+//             if(offset > 0){
+//                 offset -=20;
+//             }
+//             getData(UrlStories, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+//         next.addEventListener('click', ()=>{
+//             offset += 20;
+//             getData(UrlStories, offset)
+//             .then(data =>
+//                 addData(data.data.results))
+//                 window.scrollTo({ top: 0, behavior: 'smooth' });
+//         })
+// })
 
 
 
