@@ -27,12 +27,20 @@ const server = http.createServer(function (request, response){
         const filePath = path.join(__dirname, '/views/register.html');
         readFiles(response, filePath);
     }
-    else if(request.url === '/style'){
-        const filePath = path.join(__dirname, '/views/assets/css/styles.css');
+    // else if(request.url === '/style'){
+    //     const filePath = path.join(__dirname, '/views/assets/css/styles.css');
+    //     readFiles(response, filePath, mimeType = "text/css");
+    // }
+    else if(request.url.match(/.(css)$/) ) {
+        const filePath = path.join(__dirname, `/views/assets/css/${request.url}`);
         readFiles(response, filePath, mimeType = "text/css");
     }
     else if (request.url === '/javascript'){
         const filePath = path.join(__dirname, '/views/assets/js/app.js');
+        readFiles(response, filePath, mimeType = "text/javascript");
+    }
+    else if (request.url.match(/.(js)$/) ) {
+        const filePath = path.join(__dirname, `/views/assets/js/${request.url}`);
         readFiles(response, filePath, mimeType = "text/javascript");
     }
     else{
