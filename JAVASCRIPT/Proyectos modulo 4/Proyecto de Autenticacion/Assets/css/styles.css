@@ -131,6 +131,7 @@ a:hover{
     border: 1px solid #5C6C8A;
     border-radius: 4px;
     font-size: 1.8rem;
+    cursor: pointer;
 }
 .socialNetworks ion-icon:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
