@@ -241,6 +241,7 @@ header {
     align-items: center;
     justify-content: space-around;
     padding-bottom: 2rem;
+    margin-top: 4rem;
 }
 
 @media screen and (max-width:1040px) {
