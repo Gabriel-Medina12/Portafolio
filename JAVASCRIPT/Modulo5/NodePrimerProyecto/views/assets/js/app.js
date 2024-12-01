@@ -5,9 +5,9 @@ document.addEventListener('keypress', (e) =>{
 })
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    var loader = document.querySelector('.loader');
+    const loader = document.querySelector('.loader');
     setTimeout(()=>{
         loader.style.opacity = '0';
         // loader.style.display = 'none';
-    },120);
+    },500);
 })
