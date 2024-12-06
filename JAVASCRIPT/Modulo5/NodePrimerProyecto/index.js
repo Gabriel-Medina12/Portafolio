@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { connectDB } = require('./db/db.js')
-// const { createData, readData, updateData, deleteData } = require('./models/libros.js')
+const { createData, readData, updateData, deleteData } = require('./models/libros.js')
 
 function readFiles(response, filePath, mimeType = "text/html", codigoHTTP = 200){
     fs.readFile(filePath, (error, content)=>{
@@ -44,13 +44,13 @@ const server = http.createServer(function (request, response){
 
 connectDB().then(()=>{
     server.listen(3000, ()=>{
-        // createData({
-        //     'name': 'Elantris',
-        //     'author': 'Brandon Sanderson'
-        // })
-        // readData().then((data)=>{
-        //     console.log(data)
-        // })
+        createData({
+            'name': 'Elantris',
+            'author': 'Brandon Sanderson'
+        })
+        readData().then((data)=>{
+            console.log(data)
+        })
         console.log('Servidor corriendo en: http:localhost:3000')
     }) 
 });
