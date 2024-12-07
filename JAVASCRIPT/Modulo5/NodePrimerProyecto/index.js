@@ -36,6 +36,13 @@ const server = http.createServer(function (request, response){
         const filePath = path.join(__dirname, `/views/assets/js/${request.url}`);
         readFiles(response, filePath, mimeType = "text/javascript");
     }
+    else if (request.url === '/api/libros'){
+        readData().then(libros =>{
+            console.log(libros);
+            response.writeHead(200,{"Content-Type": 'application/json'})
+            response.end(JSON.stringify(libros));
+        })
+    }
     else{
         const filePath = path.join(__dirname, '/views/http-screens/404.html');
         readFiles(response, filePath, codigoHTTP = 404);
@@ -44,13 +51,10 @@ const server = http.createServer(function (request, response){
 
 connectDB().then(()=>{
     server.listen(3000, ()=>{
-        createData({
-            'name': 'Elantris',
-            'author': 'Brandon Sanderson'
-        })
-        readData().then((data)=>{
-            console.log(data)
-        })
+        // createData({
+        //     'name': 'Elantris',
+        //     'author': 'Brandon Sanderson'
+        // })
         console.log('Servidor corriendo en: http:localhost:3000')
     }) 
 });
