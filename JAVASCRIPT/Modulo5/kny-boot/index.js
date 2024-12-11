@@ -10,4 +10,4 @@ client.on('message', (mensaje)=>{
        mensaje.reply('...');
     }
 }) 
-client.login()
+client.login(process.env.TOKEN)
