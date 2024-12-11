@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { connectDB } = require('./db/db.js')
-// const { createData, readData, updateData, deleteData } = require('./models/libros.js')
+const { createData, readData, updateData, deleteData } = require('./models/libros.js')
 
 function readFiles(response, filePath, mimeType = "text/html", codigoHTTP = 200){
     fs.readFile(filePath, (error, content)=>{
@@ -36,6 +36,13 @@ const server = http.createServer(function (request, response){
         const filePath = path.join(__dirname, `/views/assets/js/${request.url}`);
         readFiles(response, filePath, mimeType = "text/javascript");
     }
+    else if (request.url === '/api/libros'){
+        readData().then(libros =>{
+            console.log(libros);
+            response.writeHead(200,{"Content-Type": 'application/json'})
+            response.end(JSON.stringify(libros));
+        })
+    }
     else{
         const filePath = path.join(__dirname, '/views/http-screens/404.html');
         readFiles(response, filePath, codigoHTTP = 404);
@@ -47,9 +54,6 @@ connectDB().then(()=>{
         // createData({
         //     'name': 'Elantris',
         //     'author': 'Brandon Sanderson'
-        // })
-        // readData().then((data)=>{
-        //     console.log(data)
         // })
         console.log('Servidor corriendo en: http:localhost:3000')
     }) 
