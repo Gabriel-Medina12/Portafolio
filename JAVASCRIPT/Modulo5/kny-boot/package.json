@@ -1,0 +1,15 @@
+{
+  "name": "kny-boot",
+  "version": "1.0.0",
+  "description": "Un bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Iniciado servidor\" && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Medina",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2"
+  }
+}
