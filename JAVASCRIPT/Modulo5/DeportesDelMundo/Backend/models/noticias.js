@@ -5,8 +5,9 @@ const { connect } = require('http');
 const createNoticias = async (datos) =>{
     try{
         await client.connect();
-        const dataBase = client.db('DeportesDelMundo');
-        const collection = dataBase.collection('Noticias');
+        const database = client.db('DeportesDelMundo');
+        const collection = database.collection('Noticias');
+
         const result = await collection.insertOne(datos);
 
         return result.insertedId;
@@ -17,8 +18,8 @@ const createNoticias = async (datos) =>{
 const readNoticias = async () =>{
     try{
         await client.connect();
-        const dataBase = client.db('DeportesDelMundo');
-        const collection = dataBase.collection('Noticias');
+        const database = client.db('DeportesDelMundo');
+        const collection = database.collection('Noticias');
         
         return await collection.find({}).toArray();
 
@@ -29,8 +30,9 @@ const readNoticias = async () =>{
 const updateNoticias = async (id, datos) =>{
     try{
         await client.connect();
-        const dataBase = client.db('DeportesDelMundo');
-        const collection = dataBase.collection('Noticias');
+        const database = client.db('DeportesDelMundo');
+        const collection = database.collection('Noticias');
+        
         const result = await collection.updateOne({
             _id: new ObjectId(id)
         }, {
@@ -45,8 +47,8 @@ const updateNoticias = async (id, datos) =>{
 const deleteNoticias = async (id) =>{
     try{
         await client.connect();
-        const dataBase = client.db('DeportesDelMundo');
-        const collection = dataBase.collection('Noticias');
+        const database = client.db('DeportesDelMundo');
+        const collection = database.collection('Noticias');
         const result = await collection.deleteOne({
             _id: new ObjectId(id)
         });

@@ -1,5 +1,205 @@
-*{
-    padding: 0;
+:root{
+    --white:white;
+    --AzulTitle:#007BFF;
+    --AzulClarito:#E0F7FF;
+    --AzulTitlteDeportesDelMundo:#1E90FF;
+    --CardItems:#d9d9d9a2;
+    --FondoTitle:#d9d9d923;
+    --Footer:#d9d9d957;
+    --AzulParrafos:#135594;
+    --AzulInputs:#3872ac;
+}
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+body {
+    background: var(--white);
+}
+.loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+svg{
+    fill: aliceblue;
+}
+.loader-animation{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;   
+    animation: rotate 1s infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    background: white;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 16px;
+    box-shadow: 5px 0px 12px 1px rgba(107,106,107,0.62);
+}
+
+.nav-enlaces a{
+    text-decoration: none;
+    color: var(--AzulTitle);
+    display: inline;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 2.5rem;
+}
+.contacto{
+    text-decoration: none;
+    background-color: var(--AzulClarito);
+    border-radius: 8px;
+    color: var(--AzulTitle);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: .3rem 1rem;
+    text-align: center;
+}
+.header {
+    padding: 18%;
+    background: var(--FondoTitle);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.header h1 {
+    color: var(--AzulTitle);
+    font-size: 4rem;
+    text-align: center;
+}
+main { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+} 
+.cardItem-1, 
+.cardItem-2, 
+.cardItem-3 { 
+    background-color: var(--CardItems); 
+    border-radius: 35px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0; 
+    width: 883px;
+    height: 237px; 
+    padding: 20px; 
+    text-align: center; 
+    display: flex;
+    gap: 2rem;
+    cursor: pointer;
+} 
+.cardItem-1 img, 
+.cardItem-2 img, 
+.cardItem-3 img { 
+    width: 176px; 
+    height: 181px; 
+    border-bottom: 1px solid #ddd; 
+    margin-bottom: 15px; 
+    border-radius: 28px;
+} 
+.cardItem-1 h3, 
+.cardItem-2 h3, 
+.cardItem-3 h3 { 
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+    color: var(--AzulTitle);
+    font-weight: 700;
+} 
+.cardItem-1 p, 
+.cardItem-2 p, 
+.cardItem-3 p { 
+    font-size: em; 
+    color:var(--AzulParrafos); 
+    text-align: left; 
+} 
+footer { 
+    background-color: var(--Footer); 
+    color: var(--AzulParrafos); 
+    font-weight: 700;
+    text-align: center; 
+    margin-top: 1rem;
+    padding: 10px 0; 
+    width: 100%; 
+    bottom: 0;
+}
+
+.title{
+    font-size: 32px;
+    color: var(--AzulTitle);
+    text-align: center;
+    margin-bottom: 20px; 
+}
+/*---------------------- Contacto ----------------------------*/
+.parraf{
+    font-size: 18px;
+    color: var(--AzulParrafos);
+    width: 600px;
+}
+.formulario-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input, textarea{
+    border: none;
+    border-radius: 12px;
+    background-color: var(--AzulInputs);
+    padding-left: 5px;
+    font-size: 16px;
+    color: aliceblue;
+}
+::placeholder{
+    color: aliceblue;
+}
+input{
+    width: 600px;
+    height: 40px;
+}
+textarea{
+    width: 600px;
+    height: 150px;
+    padding-top: 5px;
+}
+label{
+    margin: 6px;
+    font-size: 20px;
+    color: var(--AzulTitle);
+}
+button{
+    margin-top: 20px;
+    border: none;
+    padding: .75rem 2rem;
+    color: aliceblue;
+    background-color: var(--AzulInputs);
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 25px;
 }

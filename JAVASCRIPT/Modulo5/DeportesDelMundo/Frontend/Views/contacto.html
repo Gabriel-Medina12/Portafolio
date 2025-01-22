@@ -5,37 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Deportes del Mundo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../Assets/img/favicon-32x32.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul> 
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="deportes.html">Deportes</a></li> 
-                <li><a href="noticias.html">Noticias</a></li> 
-                <li><a href="galeria.html">Galería</a></li> 
-                <li><a href="contacto.html">Contacto</a></li> 
-            </ul>
-        </nav>
-    </header>
+    
+    <nav>
+        <div class="nav-enlaces">
+            <a href="inicio.html">Inicio</a>
+            <a href="deportes.html">Deportes</a> 
+            <a href="noticias.html">Noticias</a> 
+            <a href="galeria.html">Galería</a> 
+        </div>
+        <a href="contacto.html" class="contacto">Contacto</a> 
+    </nav>
     <main> 
         <section id="contacto"> 
-            <h1>Contacto</h1> 
-            <p>Si tienes alguna pregunta, sugerencia o comentario sobre nuestra página, no dudes en contactarnos mediante el siguiente formulario. Nos encantaría escuchar tus opiniones sobre los deportes más importantes del mundo.</p> 
-            <form action="/enviar-mensaje" method="POST"> 
+            <h1 class="title">Contacto</h1> 
+            <p class="parraf">Si tienes alguna pregunta, sugerencia o comentario sobre nuestra página, no dudes en contactarnos mediante el siguiente formulario. Nos encantaría escuchar tus opiniones sobre los deportes más importantes del mundo.</p> 
+            <form action="/enviar-mensaje" method="POST" class="formulario-contacto"> 
                 <div class="form-group"> 
                     <label for="nombre">Nombre:</label> 
-                    <input type="text" id="nombre" name="nombre" required> 
+                    <input type="text" id="nombre" name="nombre" required > 
                 </div> 
                 <div class="form-group"> 
                     <label for="email">Correo Electrónico:</label> 
-                    <input type="email" id="email" name="email" required> 
+                    <input type="email" id="email" name="email" required > 
                 </div> 
                 <div class="form-group"> 
                     <label for="mensaje">Mensaje:</label> 
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea> 
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Agregue un mensaje"></textarea> 
                 </div> 
-                <button type="submit">Enviar</button> 
+                <button type="submit" class="enviar-formulario">Enviar</button> 
             </form>
         </section> 
     </main> 
