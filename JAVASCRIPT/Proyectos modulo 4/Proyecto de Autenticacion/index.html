@@ -3,71 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Yo12wWUeC8X1h7YlNv0oBv6f9/V5WtM2PAE9mRiFQwF6f3QJnI6HscfrF3YhQ7PwChDL8AJ+ScGdgLZcQuZmCw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Proyecto Autenticación</title>
     <link rel="stylesheet" href="./Assets/css/styles.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="flip-card" id="flipCard">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <form action="" id="loginForm">
-                        <h1 style="color: #333333; text-align: center;">Iniciar Sesión</h1>
-                        <span>Use sus credenciales para iniciar sesión</span>
-                        <div class="socialNetworks">
-                            <ion-icon name="logo-google"></ion-icon>
-                            <ion-icon name="logo-instagram"></ion-icon>
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </div>
-                        <div class="emailLogin">
-                            <label for="">Correo</label>
-                            <input type="text" placeholder="Email">
-                        </div>
-                        <div class="passwordLogin">
-                            <label for="">Contraseña</label>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div style="position: relative;">
-                            <input type="checkbox" id="rememberPassword">
-                            <label for="rememberPassword">Remember Password</label>
-                            <div class="password-toggle" onclick="togglePasswordVisibility()">
-                                <i class="far fa-eye" id="togglePassword"></i>
-                            </div>
-                        </div>
-                        <button type="submit">Log In</button>
-                    </form>
+    <main class="container-auth">
+        <div class="container" id="auth">
+            <div class="containerForm">
+                <form action="" id="loginForm" class="sign-in">
+                    <h2>Iniciar Sesion</h2>
+                    <div class="social-networks">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <span>Use su correo y contraseña</span>
+                    <div class="container-input">
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="text" id="emailLogin" placeholder="Email" name="emailLogin">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock"></ion-icon>
+                        <input type="password" id="passwordLogin" placeholder="Password" name="passwordLogin">
+                    </div>
                     <a href="#">Olvidaste tu contraseña?</a>
-                    <p>No tienes cuenta? <span class="toggle-text" id="registerText">Registrate</span></p>
+                    <button type="submit" class="button">Iniciar Sesión</button>
+                </form>
+            </div>
+            <div class="containerForm">
+                <form action="" id="registerForm" class="sign-up">
+                    <h2>Registrate</h2>
+                    <div class="social-networks">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                    <span>Use su correo electrónico para registarse</span>
+                    <div class="container-input">
+                        <ion-icon name="mail"></ion-icon>
+                        <input type="text" id="emailRegistro" placeholder="Email" name="emailRegistro">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock"></ion-icon>
+                        <input type="password" id="passwordRegistro" placeholder="Password" name="passwordRegistro">
+                    </div>
+    
+                    <button type="submit" class="button">Registrarse</button>
+                </form>
+            </div>
+            <div class="container-welcome">
+                <div class="welcome-sign-up welcome">
+                    <h3>¡Bienvenido!</h3>
+                    <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                    <button class="button" id="btn-sign-up">Registrarse</button>
                 </div>
-                <div class="flip-card-back">
-                    <form action="" id="registerForm">
-                        <h1 style="color: #333333; text-align: center;">Registrate</h1>
-                        <span>Use su correo y su contraseña para registrarse</span>
-                        <div class="socialNetworks">
-                            <ion-icon name="logo-google"></ion-icon>
-                            <ion-icon name="logo-instagram"></ion-icon>
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </div>
-                        <div class="emailLogin">
-                            <label for="">Correo</label>
-                            <input type="text" placeholder="Email">
-                        </div>
-                        <div class="passwordLogin">
-                            <label for="">Contraseña</label>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <button type="submit">Registrarse</button>
-                    </form>
-                    <p>Ya tienes cuenta? <span class="toggle-text" id="loginText">Back to Login</span></p>
+                <div class="welcome-sign-in welcome">
+                    <h3>¡Hola!</h3>
+                    <p>Registrese con sus datos personales para usar todas las funciones del sitio</p>
+                    <button class="button" id="btn-sign-in">Iniciar Sesion</button>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    <div class="content" id="content">
+        <button id="cerrarSesion" class="cerrarSesion">
+            Cerrar Sesion
+        </button>
+    </div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="./Assets/js/auth.js" type="module"></script>

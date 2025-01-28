@@ -8,132 +8,164 @@ body{
     background-color: #f0f4f3;
     font-family: "Montserrat", serif;
 }
-.container {
-    perspective: 1000px;
+.container-auth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
-.flip-card{
-    width: 450px;
+.container{
+    width: 800px;
     height: 500px;
+    display: flex;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-    background-color: #E8F0FE;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0,0,0,0.3);
 }
-.flip-card-inner{
+.containerForm{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+    overflow: hidden;
 }
-.flip-card-front,
-.flip-card-back{
-    width: 100%;
+.containerForm form{
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in;
+}
+.containerForm h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.social-networks{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.social-networks ion-icon{
+    border: 1px solid #c9cccb;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}
+.containerForm span{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.container-input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    background-color: transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #333;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
 }
-.flip-card-back{
-    transform: rotateY(180deg);
-}
-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-}
-input{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1rem;
+.container-input input{
     border: none;
-    border-radius: 8px;
-    background-color: #A0B5DA;
-    color: white;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
 }
-input::placeholder{
-    color: white;
+.containerForm a{
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
-button{
-    padding: 10px;
-    font-size: 1rem;
-    background-color: #A0B5DA;
-    color: white;
-    border: 2px solid #5C6C8A;
-    border-radius: 10px;
+.button{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 10px;
+    background-color: #282c34;
+    color: white;
 }
-button:hover{
-    box-shadow: 0px 0px 20px #5C6C8A;
+.button:hover{
+    box-shadow: 0px 0px 20px #282c34;
 }
-span{
-    font-size: 16px;
-    text-align: center;
+.sign-up{
+    transform: translateX(-100%);
 }
-a{
-    color: #333;
-    text-decoration: none;
+.container.toggle .sign-in{
+    transform: translateX(100%);
 }
-a:hover{
-    text-decoration: underline;
+.container.toggle .sign-up{
+    transform: translateX(0);
 }
-.toggle-text{
-    margin-top: 10px;
-    color: #5C6C8A;
-    cursor: pointer;
-}
-.toggle-text:hover{
-    text-decoration: underline;
-}
-.password-toggle{
+/*Welcome*/
+.container-welcome{
+    background-color: #282c34;
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform .5s ease-in-out, border-radius 0.5s ease-in-out;
+    border-radius: 50% 0 0 50%;
+
 }
-.password-toggle i{
-    font-size: 1rem;
+.container.toggle .container-welcome{
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background-color: #394661;
 }
-.password-visible i.fa-eye-slash {
-    display: none;
-}
-.emailLogin, .passwordLogin{
+.container-welcome .welcome{
+    position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5 ease-in-out;
 }
-.socialNetworks{
+.welcome-sign-in{
+    transform: translateX(100%);
+}
+.container-welcome h3{
+    font-size: 40px;
+    color: white;
+}
+.container-welcome p{
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+.container-welcome button{
+    border: 2px solid white;
+    background-color: transparent;
+}
+.container.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+.container.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
+.content{
     display: flex;
-    justify-content: center;
-    margin: 1rem;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.socialNetworks ion-icon{
-    border: 1px solid #5C6C8A;
-    border-radius: 4px;
-    font-size: 1.8rem;
+.cerrarSesion{
+    border-radius: 12px;
+    border: #282c34;
+    padding: 1rem;
+    color:#EEEEEE;
+    background-color: #394661;
     cursor: pointer;
 }
-.socialNetworks ion-icon:hover{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    font-size: 2.2rem;
+.cerrarSesion:hover{
+    box-shadow: 0px 0px 20px #282c34;
 }

@@ -1,11 +1,14 @@
-const flipCard = document.getElementById('flipCard');
-const registerText = document.getElementById('registerText');
-const loginText = document.getElementById('loginText');
+const container = document.querySelector('.container');
+const btnSignIn = document.getElementById('btn-sign-in');
+const btnSignUp = document.getElementById('btn-sign-up');
 
-registerText.addEventListener('click', ()=>{
-    flipCard.style.transform = 'rotateY(180deg)';
-});
-
-loginText.addEventListener('click', () =>{
-    flipCard.style.transform = 'rotateY(0deg)';
-});
+btnSignIn.addEventListener('click', ()=>{
+    container.classList.remove('toggle');
+})
+btnSignUp.addEventListener('click', ()=>{
+    container.classList.add('toggle');
+})
+const enlace = document.getElementById('Home')
+enlace.addEventListener('click', ()=>{
+    dom
+})
