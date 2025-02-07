@@ -3,12 +3,15 @@ const { db } = require('./db/db');
 const app = express();
 const path = require('path')
 const port = 3000;
+const bodyParser = require('body-parser')
 
 
 const usuarioController = require('./controllers/users');
 
 app.use(express.static(path.join(__dirname, 'assets')))
 app.set('view engine', 'ejs');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}))
 
 
 app.get('/', (request, response)=>{
