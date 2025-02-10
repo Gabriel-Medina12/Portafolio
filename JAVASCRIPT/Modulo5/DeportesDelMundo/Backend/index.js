@@ -48,3 +48,37 @@ connectDB().then(() => {
         console.log('Servidor corriendo en: http://localhost:3000');
     });
 });
+
+// const http = require('http');
+// const path = require('path');
+// const fs = require('fs');
+// const express = require('express');
+// const { connectDB } = require("./db/datebase.js");
+// const noticiasRoutes = require('./routes/noticiasRoutes');
+
+// const app = express();
+// app.use(express.json());
+
+// // Rutas de noticias
+// app.use('/api', noticiasRoutes);
+
+// // Servidor estático (para servir archivos HTML, CSS, JS, etc.)
+// app.use(express.static(path.join(__dirname, '../Frontend')));
+
+// // Manejo de errores 404
+// app.use((req, res) => {
+//     res.status(404).sendFile(path.join(__dirname, '../Frontend/Views/http:screens/404.html'));
+// });
+
+// // Manejo de errores 500
+// app.use((err, req, res, next) => {
+//     console.error(err.stack);
+//     res.status(500).sendFile(path.join(__dirname, '../Frontend/Views/http:screens/500.html'));
+// });
+
+// connectDB().then(() => {
+//     const server = http.createServer(app);
+//     server.listen(3000, () => {
+//         console.log('Servidor corriendo en: http://localhost:3000');
+//     });
+// });
