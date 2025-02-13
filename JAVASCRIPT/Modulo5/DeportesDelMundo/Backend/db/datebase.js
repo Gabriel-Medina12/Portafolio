@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const client = new MongoClient('mongodb+srv://saulymarclash12:DataBase12@cluster0.kinkr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+const client = new MongoClient('mongodb+srv://saulymarclash12:saulymarclash@cluster0.kinkr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 async function connectDB() {
     try{

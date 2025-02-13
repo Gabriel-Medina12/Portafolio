@@ -168,7 +168,7 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
-input, textarea{
+#nombre, #email, #mensaje{
     border: none;
     border-radius: 12px;
     background-color: var(--AzulInputs);
@@ -179,16 +179,16 @@ input, textarea{
 ::placeholder{
     color: aliceblue;
 }
-input{
+#nombre, #email{
     width: 600px;
     height: 40px;
 }
-textarea{
+#mensaje{
     width: 600px;
     height: 150px;
     padding-top: 5px;
 }
-label{
+.label{
     margin: 6px;
     font-size: 20px;
     color: var(--AzulTitle);
@@ -202,6 +202,63 @@ button{
     font-size: 18px;
     font-weight: 900;
     border-radius: 25px;
+}
+
+/* ---------------------- NOTICIA ------------------------ */
+.creador-noticia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.noticia-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titulo, .contenido{
+    border: none;
+    border-radius: 12px;
+    background-color: var(--AzulInputs);
+    padding-left: 5px;
+    font-size: 16px;
+    color: aliceblue;
+}
+.titulo{
+    width: 700px;
+    height: 40px;
+}
+.contenido{
+    width: 700px;
+    height: 250px;
+    padding-top: 4px;
+}
+
+.container-noticias{
+    background-color: var(--CardItems); 
+    border-radius: 35px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+    width: 1600px;
+    height: 320px; 
+    padding: 20px; 
+    text-align: center; 
+    cursor: pointer;
+}
+.container-noticias h2{
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+    color: var(--AzulTitle);
+    font-weight: 700;
+}
+.container-noticias p{
+    font-size: em; 
+    color:var(--AzulParrafos);  
+}
+.container-noticias small{
+    font-size: em; 
+    color:var(--AzulParrafos);  
 }
 
 /*---------------------- GALERIA ----------------------- */

@@ -2,6 +2,7 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 const { connectDB } = require("./db/datebase.js");
+const { createNoticias, readNoticias, updateNoticias, deleteNoticias } = require('./models/noticias.js')
 
 function readFiles(response, filePath, mimeType = "text/html", codigoHTTP = 200) {
     fs.readFile(filePath, (error, content) => {
@@ -15,14 +16,53 @@ function readFiles(response, filePath, mimeType = "text/html", codigoHTTP = 200)
     });
 }
 
-const server = http.createServer(function (request, response) {
+const server = http.createServer(async function (request, response) {
     const url = request.url;
     const extname = path.extname(url);
 
     if (url === '/') {
         const filePath = path.join(__dirname, '../Frontend/Views/inicio.html');
         readFiles(response, filePath);
-    } else if (extname === '.html') {
+    }else if(url === '/api/noticias' && request.method === 'GET'){
+        const noticias = await readNoticias();
+        response.writeHead(200, {'Content-type': 'application/json'});
+        response.end(JSON.stringify(noticias));
+    }else if (url === '/api/noticias' && request.method === 'POST') {
+        // Crear una nueva noticia
+        let body = '';
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', async () => {
+            try {
+                const nuevaNoticia = JSON.parse(body);
+                const id = await createNoticias(nuevaNoticia);
+                response.writeHead(201, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify({ id }));
+            } catch (error) {
+                console.error('Error al crear la noticia:', error);
+                response.writeHead(500, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify({ error: 'Error interno del servidor' }));
+            }
+        });
+    }else if(url.startsWith('/api/noticias') && request.method === 'PUT'){
+        const id = url.split('/')[3];
+        let body = '';
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', async () => {
+            const datosActualizados = JSON.parse(body);
+            await updateNoticias(id, datosActualizados);
+            response.writeHead(200, { 'Content-Type': 'application/json' });
+            response.end(JSON.stringify({ message: 'Noticia actualizada' }));
+        });
+    }else if(url.startsWith('/api/noticias') && request.method === 'DELETE'){
+        const id = url.split('/')[3];
+        await deleteNoticias(id);
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.end(JSON.stringify({ message: 'Noticia eliminada' }));
+    }else if (extname === '.html') {
         const filePath = path.join(__dirname, `../Frontend/Views${url}`);
         readFiles(response, filePath);
     } else if (extname === '.css') {
