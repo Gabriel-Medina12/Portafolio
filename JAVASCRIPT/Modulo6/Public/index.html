@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="checklist.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Gestor de Tareas</h1>
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Título" required>
+        <textarea id="description" placeholder="Descripción"></textarea>
+        <input type="date" id="dueDate" required>
+        <select id="status">
+            <option value="pendiente">Pendiente</option>
+            <option value="en progreso">En Progreso</option>
+            <option value="completada">Completada</option>
+        </select>
+        <button type="submit">Agregar Tarea</button>
+    </form>
+
+    <h2>Lista de Tareas</h2>
+    <ul id="taskList"></ul>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
