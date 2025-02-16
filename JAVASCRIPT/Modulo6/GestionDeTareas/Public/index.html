@@ -24,6 +24,22 @@
     <h2>Lista de Tareas</h2>
     <ul id="taskList"></ul>
 
+    <div id="editFormContainer" style="display: none;">
+        <h2>Editar Tarea</h2>
+        <form id="editForm">
+            <input type="text" id="editTitle" placeholder="Título" required>
+            <textarea id="editDescription" placeholder="Descripción"></textarea>
+            <input type="date" id="editDueDate" required>
+            <select id="editStatus">
+                <option value="pendiente">Pendiente</option>
+                <option value="en progreso">En Progreso</option>
+                <option value="completada">Completada</option>
+            </select>
+            <button type="submit">Guardar Cambios</button>
+            <button type="button" onclick="cancelEdit()">Cancelar</button>
+        </form>
+    </div>
+
     <script src="app.js"></script>
     
 </body>

@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const taskForm = document.getElementById('taskForm');
     const taskList = document.getElementById('taskList');
+    const editFormContainer = document.getElementById('editFormContainer');
+    const editForm = document.getElementById('editForm');
+    let currentTaskId = null;
 
     loadTasks();
 
@@ -11,26 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const dueDate = document.getElementById('dueDate').value;
         const status = document.getElementById('status').value;
 
-        if (!title) {
-            alert('El título es obligatorio');
-            return;
-        }
-
         fetch('/api/tasks', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title, description, due_date: dueDate, status })
         })
         .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                alert(data.error); // Muestra el error si lo hay
-            } else {
-                loadTasks(); // Recarga la lista de tareas
-                document.getElementById('taskForm').reset(); // Limpia el formulario
-            }
-        })
-        .catch(error => console.error('Error:', error));
+        .then(() => {
+            loadTasks();
+            taskForm.reset();
+        });
     });
 
     function loadTasks() {
@@ -45,12 +38,52 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${task.description}</p>
                         <p>Fecha: ${task.due_date}</p>
                         <p>Estado: ${task.status}</p>
+                        <button onclick="editTask(${task.id})">Editar</button>
                         <button onclick="deleteTask(${task.id})">Eliminar</button>
                     `;
                     taskList.appendChild(li);
                 });
             });
     }
+
+    window.editTask = function(id) {
+        fetch(`/api/tasks/${id}`)
+            .then(response => response.json())
+            .then(task => {
+                editFormContainer.style.display = 'block';
+
+                document.getElementById('editTitle').value = task.title;
+                document.getElementById('editDescription').value = task.description;
+                document.getElementById('editDueDate').value = task.due_date;
+                document.getElementById('editStatus').value = task.status;
+
+                currentTaskId = task.id;
+            });
+    };
+
+    editForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('editTitle').value;
+        const description = document.getElementById('editDescription').value;
+        const dueDate = document.getElementById('editDueDate').value;
+        const status = document.getElementById('editStatus').value;
+
+        fetch(`/api/tasks/${currentTaskId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title, description, due_date: dueDate, status })
+        })
+        .then(response => response.json())
+        .then(() => {
+            loadTasks();
+            cancelEdit();
+        });
+    });
+
+    window.cancelEdit = function() {
+        editFormContainer.style.display = 'none';
+        currentTaskId = null;
+    };
 
     window.deleteTask = function(id) {
         fetch(`/api/tasks/${id}`, { method: 'DELETE' })

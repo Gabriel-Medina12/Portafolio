@@ -13,6 +13,19 @@ router.get('/', (req, res)=>{
         res.json(rows);
     });
 });
+router.get('/:id', (req, res) => {
+    const taskId = req.params.id;
+    const sql = 'SELECT * FROM tasks WHERE id = ?';
+    db.get(sql, [taskId], (err, row) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        if (!row) {
+            return res.status(404).json({ error: 'Tarea no encontrada' });
+        }
+        res.json(row);
+    });
+});
 
 router.post('/', (req, res) => {
     const { title, description, due_date, status } = req.body;
