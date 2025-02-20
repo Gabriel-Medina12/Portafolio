@@ -7,13 +7,14 @@ const createNoticias = async (datos) =>{
         await client.connect();
         const database = client.db('DeportesDelMundo');
         const collection = database.collection('Noticias');
-
         const result = await collection.insertOne(datos);
-
         return result.insertedId;
     }catch(error){
         console.log(error);
+    } finally{
+        await client.close();
     }
+    console.log('Insertando noticia en la base de datos...');
 }
 const readNoticias = async () =>{
     try{

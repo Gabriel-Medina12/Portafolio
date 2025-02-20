@@ -22,10 +22,29 @@
         <section class="title">
             <h1>Noticias</h1>
         </section>
-        <div id="content-noticias" class="content-noticias">
-
-        </div>
+        <div id="noticias-container" class="noticias-container"></div>
     </main>
-    
+    <div class="creador-noticia">
+        <section class="title">
+            <h3>Crear Nueva Noticia</h3>
+        </section>
+        <form id="form-noticia">
+            <div class="noticia-group">
+                <label class="label">Título:</label>
+                <input type="text" id="titulo" class="titulo">
+            </div>
+            <br>
+            <div class="noticia-group">
+                <label class="label">Contenido:</label>
+                <textarea id="contenido" class="contenido"></textarea
+            </div>
+            <br>
+            <button type="submit">Crear Noticia</button>
+        </form>
+    </div>
+    <footer> 
+        <p>&copy; 2024 Deportes del Mundo. Todos los derechos reservados.</p> 
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
