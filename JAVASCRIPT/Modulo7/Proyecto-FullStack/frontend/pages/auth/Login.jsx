@@ -1,6 +1,10 @@
-import Button from "../components/auth/Button"
+
+import { useState } from "react";
+import Button from "../../src/components/auth/Button"
 
 const Login = ()=>{
+    const { email, setEmail } = useState('');
+    const { password, setPassword } = useState('');
 
     const loginFunction = async(e)=>{
         e.preventDefault();
@@ -18,7 +22,8 @@ const Login = ()=>{
             alert(data.message)
         })
     }
-
+    setEmail('pepe@example.com')
+    console.log(email, password)
     return(
         <>
         <div className="container container-auth">

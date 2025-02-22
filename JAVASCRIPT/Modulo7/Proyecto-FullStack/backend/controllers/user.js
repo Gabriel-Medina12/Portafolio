@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require('../models/user');
+// const { User } = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { where } = require('sequelize');
-const user = require('../models/user');
+const {User} = require('../models');
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
+    // Validación básica
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email y contraseña son requeridos' });
+    }
+
     try {
-        // Lógica de autenticación
         const user = await User.findOne({ where: { email } });
         if (!user) {
             return res.status(400).json({ message: 'Usuario no encontrado' });
@@ -33,22 +37,19 @@ router.post('/register', async (req, res) => {
 
     try {
         // Verificar si el usuario ya existe
-        const existingUser = await User.findOne({ where: { email } });
-        if (existingUser) {
-            return res.status(400).json({ message: 'El usuario ya existe' });
-        }
+        // const existingUser = await User.findOne({ where: { email } });
+        // if (existingUser) {
+        //     return res.status(400).json({ message: 'El usuario ya existe' });
+        // }
 
         // Hashear la contraseña
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // Crear un nuevo usuario
-        const user = await User.create({ email, password: hashedPassword, name });
+        const user = await User.create({ username: email, password: hashedPassword });
 
-        // Generar un token JWT
-        const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
-
-        // Enviar respuesta con el token
-        res.status(201).json({ token, user: { id: user.id, email: user.email } });
+        // Enviar respuesta
+        res.status(201).json({ user });
     } catch (error) {
         res.status(500).json({ message: 'Error en el servidor', error: error.message });
     }
