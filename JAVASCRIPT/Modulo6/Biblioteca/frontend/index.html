@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Libros</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Biblioteca de Libros</h1>
+        <form id="formLibro" action="/api/libros" method="POST" enctype="multipart/form-data">
+            <input type="hidden" id="libroId" name="id"> <!-- Campo oculto para el ID -->
+            <input type="text" id="titulo" name="titulo" placeholder="Título" required>
+            <input type="text" id="autor" name="autor" placeholder="Autor" required>
+            <input type="date" id="fecha_publicacion" name="fecha_publicacion">
+            <input type="text" id="genero" name="genero" placeholder="Género">
+            <input type="file" id="portada" name="portada">
+            <!-- <input type="file" id="archivo" name="archivo"> -->
+            <button type="submit">Crear Libro</button>
+        </form>
+        <ul id="listaLibros"></ul>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
