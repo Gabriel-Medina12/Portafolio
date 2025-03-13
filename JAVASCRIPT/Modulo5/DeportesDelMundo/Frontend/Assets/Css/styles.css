@@ -168,7 +168,7 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
-#nombre, #email, #mensaje{
+#nombreContacto, #emailContacto, #mensajeContacto{
     border: none;
     border-radius: 12px;
     background-color: var(--AzulInputs);
@@ -179,11 +179,11 @@ footer {
 ::placeholder{
     color: aliceblue;
 }
-#nombre, #email{
+#nombreContacto, #emailContacto{
     width: 600px;
     height: 40px;
 }
-#mensaje{
+#mensajeContacto{
     width: 600px;
     height: 150px;
     padding-top: 5px;
