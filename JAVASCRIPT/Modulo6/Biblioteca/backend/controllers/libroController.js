@@ -30,47 +30,48 @@ exports.listarLibros = async (req, res) => {
     }
 };
 
-exports.crearLibro = async (req, res) => {
-    const { titulo, autor, fecha_publicacion, genero } = req.body;
-    try {
-        await Libro.crear({ titulo, autor, fecha_publicacion, genero });
-        res.status(201).json({ mensaje: 'Libro creado correctamente' });
-    } catch (error) {
-        res.status(500).json({ error: 'Error al crear el libro' });
-    }
-};
-
 exports.crearLibro = [
-    upload.single('portada'), // Middleware para manejar la subida de un solo archivo
-    // upload2.single('book'), // Middleware para manejar la subida de un solo archivo
+    upload.single('portada'), 
     async (req, res) => {
         const { titulo, autor, fecha_publicacion, genero } = req.body;
-        const portada = req.file ? `/img/${req.file.filename}` : null; // Ruta de la imagen
-        const book = req.file ? `/books/${req.file.filename}` : null; // Ruta de la imagen
+        const portada = req.file ? `/img/${req.file.filename}` : req.body.portadaExistente; 
 
         try {
             await Libro.crear({ titulo, autor, fecha_publicacion, genero, portada });
-            res.redirect('/libros');
+            res.status(201).json({ message: 'Libro creado exitosamente' });
         } catch (error) {
             console.error('Error al crear el libro:', error);
-            res.status(500).send('Error al crear el libro');
+            res.status(500).json({ Error: 'Error al crear el libro'});
         }
     }
 ];
 
+exports.obtenerLibro = async (req, res) => {
+    const { id } = req.params;
+    try {
+      const libro = await Libro.obtener(id);
+      if (!libro) {
+        return res.status(404).json({ error: 'Libro no encontrado' });
+      }
+      res.json(libro);
+    } catch (error) {
+      res.status(500).json({ error: 'Error al obtener el libro' });
+    }
+  };
+
 exports.actualizarLibro = [
-    upload.single('portada'), // Middleware para manejar la subida de un nuevo archivo
+    upload.single('portada'), 
     async (req, res) => {
         const { id } = req.params;
         const { titulo, autor, fecha_publicacion, genero } = req.body;
-        const portada = req.file ? `/img/${req.file.filename}` : req.body.portadaExistente; // Usa la nueva imagen o la existente
+        const portada = req.file ? `/img/${req.file.filename}` : req.body.portadaExistente; 
 
         try {
             await Libro.actualizar(id, { titulo, autor, fecha_publicacion, genero, portada });
-            res.redirect('/libros');
+            res.json({ mensaje: 'Libro actualizado correctamente' });
         } catch (error) {
             console.error('Error al actualizar el libro:', error);
-            res.status(500).send('Error al actualizar el libro');
+            res.status(500).json({ Error: 'Error al actualizar el libro'});
         }
     }
 ];

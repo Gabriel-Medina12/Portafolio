@@ -5,6 +5,10 @@ class Libro {
         const [rows] = await db.query('SELECT * FROM libros');
         return rows;
     }
+    static async obtener(id) {
+        const [rows] = await db.query('SELECT * FROM libros WHERE id = ?', [id]);
+        return rows[0]; // Devuelve el primer resultado (o undefined si no existe)
+    }
 
     static async crear(libro) {
         const [result] = await db.query('INSERT INTO libros SET ?', libro);

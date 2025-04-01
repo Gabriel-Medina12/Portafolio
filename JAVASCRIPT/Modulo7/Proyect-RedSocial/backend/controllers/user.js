@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const { User } = require('../models');
 const SECRET_KEY = 'tu_secreto_aqui'; // Asegúrate de mantener este secreto seguro
+const sendMail = require('../controllers/send-mail')
+const origin = process.env.ORIGIN;
+
 
 // Registro de usuarios
 router.post('/register', async (req, res) => {
@@ -11,6 +14,14 @@ router.post('/register', async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = await User.create({ username: email, password: hashedPassword });
+        sendMail(email, 'Bienvenido a PEPE', `
+                <h1>
+                    Gracias por unirte a la comunidad
+                </h1>
+                <p>
+
+                <p/>
+            `)
         res.status(201).json({message: "Registro exitoso"});
     } catch (error) {
         console.log(error)
@@ -42,6 +53,13 @@ router.post('/forgot-password', (req, res) => {
 
 // Cambio de contraseña
 router.post('/change-password', async (req, res) => {
+    const { email } = req.body
+    const token = jwt.sign({ email: email }, SECRET_KEY, { expiresIn: '1h' });
+    const user = await User.findOne({ where: { username: email } });
+    sendMail(email, 'Cambiar contraseña', `
+            Presione el enlace para cambiar contraseña
+            <a href='${origin}/change-password${token}'>Cambiar</a>
+        `)
     const { userId, oldPassword, newPassword } = req.body;
     try {
         const user = await User.findByPk(userId);

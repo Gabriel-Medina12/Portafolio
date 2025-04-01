@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const dbConfig = require('./config/config.json').development;
 require('dotenv').config();
-
+const transporter = require('./config/mail')
 const app = express();
 const port = process.env.PORT;
 const host = process.env.HOST;
