@@ -4,10 +4,10 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/img')); // Ruta correcta
+        cb(null, path.join(__dirname, '../public/img')); 
     },
     filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`); // Nombre único para el archivo
+        cb(null, `${Date.now()}-${file.originalname}`); 
     }
 });
 // const storage2 = multer.diskStorage({

@@ -7,7 +7,7 @@ class Libro {
     }
     static async obtener(id) {
         const [rows] = await db.query('SELECT * FROM libros WHERE id = ?', [id]);
-        return rows[0]; // Devuelve el primer resultado (o undefined si no existe)
+        return rows[0]; 
     }
 
     static async crear(libro) {

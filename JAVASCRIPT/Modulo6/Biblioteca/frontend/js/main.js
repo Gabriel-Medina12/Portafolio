@@ -2,23 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formLibro');
     const listaLibros = document.getElementById('listaLibros');
 
-    // Cargar libros al iniciar
+
     cargarLibros();
 
-    // Crear libro
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
     
-        const formData = new FormData(form); // Usa FormData para enviar archivos
+        const formData = new FormData(form); 
     console.log(formData)
-        // Define la URL basada en si estás creando o actualizando un libro
+
         const libroId = document.getElementById('libroId').value;
         const url = libroId ? `/api/libros/${libroId}` : '/api/libros';
         const method = libroId ? 'PUT' : 'POST';
     
         const response = await fetch(url, {
             method,
-            body: formData, // Envía el formulario como FormData
+            body: formData, 
         });
     
         if (response.ok) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cargar libros
+
     async function cargarLibros() {
         const response = await fetch('/api/libros');
         const libros = await response.json();
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('autor').value = libro.autor;
         document.getElementById('fecha_publicacion').value = libro.fecha_publicacion;
         document.getElementById('genero').value = libro.genero;
-        document.getElementById('libroId').value = libro.id; // Llena el campo oculto con el ID
+        document.getElementById('libroId').value = libro.id; 
         document.getElementById('portadaExistente').value = libro.portada || '';
-        // Cambia el texto del botón del formulario
+ 
         document.querySelector('button[type="submit"]').textContent = 'Actualizar Libro';
     };
 
-    // Eliminar libro
+
     window.eliminarLibro = async (id) => {
         const response = await fetch(`/api/libros/${id}`, { method: 'DELETE' });
         if (response.ok) cargarLibros();
